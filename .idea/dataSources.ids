@@ -1,0 +1,1307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - @localhost" uuid="b1b3218d-f933-41e3-a11b-6981be6ffe05">
+    <database-info product="MySQL" version="5.6.26" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="bitnami_drupal7"/>
+    <schema name="" catalog="bitnami_wordpress"/>
+    <schema name="" catalog="bugs"/>
+    <schema name="" catalog="ci_test"/>
+    <schema name="" catalog="classicmodels"/>
+    <schema name="" catalog="griddemo"/>
+    <schema name="" catalog="test"/>
+    <table name="actions" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="aid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="JzAn" remarks="UHJpbWFyeSBLZXk6IFVuaXF1ZSBhY3Rpb25zIElELg=="/>
+      <column name="type" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIG9iamVjdCB0aGF0IHRoYXQgYWN0aW9uIGFjdHMgb24gKG5vZGUsIHVzZXIsIGNvbW1lbnQsIHN5c3RlbSBvciBjdXN0b20gdHlwZXMuKQ=="/>
+      <column name="callback" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGNhbGxiYWNrIGZ1bmN0aW9uIHRoYXQgZXhlY3V0ZXMgd2hlbiB0aGUgYWN0aW9uIHJ1bnMu"/>
+      <column name="parameters" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="false" jdbcType="-4" remarks="UGFyYW1ldGVycyB0byBiZSBwYXNzZWQgdG8gdGhlIGNhbGxiYWNrIGZ1bmN0aW9uLg=="/>
+      <column name="label" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="JzAn" remarks="TGFiZWwgb2YgdGhlIGFjdGlvbi4="/>
+      <primary-key name="PRIMARY" columns="aid"/>
+    </table>
+    <table name="authmap" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="aid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="UHJpbWFyeSBLZXk6IFVuaXF1ZSBhdXRobWFwIElELg==" autoIncrement="true"/>
+      <column name="uid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VXNlcuKAmXMgdXNlcnMudWlkLg=="/>
+      <column name="authname" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VW5pcXVlIGF1dGhlbnRpY2F0aW9uIG5hbWUu"/>
+      <column name="module" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="TW9kdWxlIHdoaWNoIGlzIGNvbnRyb2xsaW5nIHRoZSBhdXRoZW50aWNhdGlvbi4="/>
+      <primary-key name="PRIMARY" columns="aid"/>
+      <index name="authname" unique="true" columns="authname"/>
+    </table>
+    <table name="batch" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="bid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="UHJpbWFyeSBLZXk6IFVuaXF1ZSBiYXRjaCBJRC4="/>
+      <column name="token" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" remarks="QSBzdHJpbmcgdG9rZW4gZ2VuZXJhdGVkIGFnYWluc3QgdGhlIGN1cnJlbnQgdXNlcuKAmXMgc2Vzc2lvbiBpZCBhbmQgdGhlIGJhdGNoIGlkLCB1c2VkIHRvIGVuc3VyZSB0aGF0IG9ubHkgdGhlIHVzZXIgd2hvIHN1Ym1pdHRlZCB0aGUgYmF0Y2ggY2FuIGVmZmVjdGl2ZWx5IGFjY2VzcyBpdC4="/>
+      <column name="timestamp" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="QSBVbml4IHRpbWVzdGFtcCBpbmRpY2F0aW5nIHdoZW4gdGhpcyBiYXRjaCB3YXMgc3VibWl0dGVkIGZvciBwcm9jZXNzaW5nLiBTdGFsZSBiYXRjaGVzIGFyZSBwdXJnZWQgYXQgY3JvbiB0aW1lLg=="/>
+      <column name="batch" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="true" jdbcType="-4" remarks="QSBzZXJpYWxpemVkIGFycmF5IGNvbnRhaW5pbmcgdGhlIHByb2Nlc3NpbmcgZGF0YSBmb3IgdGhlIGJhdGNoLg=="/>
+      <primary-key name="PRIMARY" columns="bid"/>
+      <index name="token" unique="false" columns="token"/>
+    </table>
+    <table name="block" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="bid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="UHJpbWFyeSBLZXk6IFVuaXF1ZSBibG9jayBJRC4=" autoIncrement="true"/>
+      <column name="module" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIG1vZHVsZSBmcm9tIHdoaWNoIHRoZSBibG9jayBvcmlnaW5hdGVzOyBmb3IgZXhhbXBsZSwg4oCZdXNlcuKAmSBmb3IgdGhlIFdob+KAmXMgT25saW5lIGJsb2NrLCBhbmQg4oCZYmxvY2vigJkgZm9yIGFueSBjdXN0b20gYmxvY2tzLg=="/>
+      <column name="delta" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="JzAn" remarks="VW5pcXVlIElEIGZvciBibG9jayB3aXRoaW4gYSBtb2R1bGUu"/>
+      <column name="theme" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIHRoZW1lIHVuZGVyIHdoaWNoIHRoZSBibG9jayBzZXR0aW5ncyBhcHBseS4="/>
+      <column name="status" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="QmxvY2sgZW5hYmxlZCBzdGF0dXMuICgxID0gZW5hYmxlZCwgMCA9IGRpc2FibGVkKQ=="/>
+      <column name="weight" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="QmxvY2sgd2VpZ2h0IHdpdGhpbiByZWdpb24u"/>
+      <column name="region" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlbWUgcmVnaW9uIHdpdGhpbiB3aGljaCB0aGUgYmxvY2sgaXMgc2V0Lg=="/>
+      <column name="custom" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="RmxhZyB0byBpbmRpY2F0ZSBob3cgdXNlcnMgbWF5IGNvbnRyb2wgdmlzaWJpbGl0eSBvZiB0aGUgYmxvY2suICgwID0gVXNlcnMgY2Fubm90IGNvbnRyb2wsIDEgPSBPbiBieSBkZWZhdWx0LCBidXQgY2FuIGJlIGhpZGRlbiwgMiA9IEhpZGRlbiBieSBkZWZhdWx0LCBidXQgY2FuIGJlIHNob3duKQ=="/>
+      <column name="visibility" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="RmxhZyB0byBpbmRpY2F0ZSBob3cgdG8gc2hvdyBibG9ja3Mgb24gcGFnZXMuICgwID0gU2hvdyBvbiBhbGwgcGFnZXMgZXhjZXB0IGxpc3RlZCBwYWdlcywgMSA9IFNob3cgb25seSBvbiBsaXN0ZWQgcGFnZXMsIDIgPSBVc2UgY3VzdG9tIFBIUCBjb2RlIHRvIGRldGVybWluZSB2aXNpYmlsaXR5KQ=="/>
+      <column name="pages" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1" remarks="Q29udGVudHMgb2YgdGhlICJQYWdlcyIgYmxvY2s7IGNvbnRhaW5zIGVpdGhlciBhIGxpc3Qgb2YgcGF0aHMgb24gd2hpY2ggdG8gaW5jbHVkZS9leGNsdWRlIHRoZSBibG9jayBvciBQSFAgY29kZSwgZGVwZW5kaW5nIG9uICJ2aXNpYmlsaXR5IiBzZXR0aW5nLg=="/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="Q3VzdG9tIHRpdGxlIGZvciB0aGUgYmxvY2suIChFbXB0eSBzdHJpbmcgd2lsbCB1c2UgYmxvY2sgZGVmYXVsdCB0aXRsZSwgPG5vbmU+IHdpbGwgcmVtb3ZlIHRoZSB0aXRsZSwgdGV4dCB3aWxsIGNhdXNlIGJsb2NrIHRvIHVzZSBzcGVjaWZpZWQgdGl0bGUuKQ=="/>
+      <column name="cache" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ==" remarks="QmluYXJ5IGZsYWcgdG8gaW5kaWNhdGUgYmxvY2sgY2FjaGUgbW9kZS4gKC0yOiBDdXN0b20gY2FjaGUsIC0xOiBEbyBub3QgY2FjaGUsIDE6IENhY2hlIHBlciByb2xlLCAyOiBDYWNoZSBwZXIgdXNlciwgNDogQ2FjaGUgcGVyIHBhZ2UsIDg6IEJsb2NrIGNhY2hlIGdsb2JhbCkgU2VlIERSVVBBTF9DQUNIRV8qIGNvbnN0YW50cyBpbiAuLi9pbmNsdWRlcy9jb21tb24uaW5jIGZvciBtb3JlIGRldGFpbGVkIGluZm9ybWF0aW9uLg=="/>
+      <primary-key name="PRIMARY" columns="bid"/>
+      <index name="tmd" unique="true" columns="theme,module,delta"/>
+      <index name="list" unique="false" columns="theme,status,region,weight,module"/>
+    </table>
+    <table name="block_custom" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="bid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIGJsb2Nr4oCZcyBibG9jay5iaWQu" autoIncrement="true"/>
+      <column name="body" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1" remarks="QmxvY2sgY29udGVudHMu"/>
+      <column name="info" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="QmxvY2sgZGVzY3JpcHRpb24u"/>
+      <column name="format" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="VGhlIGZpbHRlcl9mb3JtYXQuZm9ybWF0IG9mIHRoZSBibG9jayBib2R5Lg=="/>
+      <primary-key name="PRIMARY" columns="bid"/>
+      <index name="info" unique="true" columns="info"/>
+    </table>
+    <table name="block_node_type" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="module" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" remarks="VGhlIGJsb2Nr4oCZcyBvcmlnaW4gbW9kdWxlLCBmcm9tIGJsb2NrLm1vZHVsZS4="/>
+      <column name="delta" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" remarks="VGhlIGJsb2Nr4oCZcyB1bmlxdWUgZGVsdGEgd2l0aGluIG1vZHVsZSwgZnJvbSBibG9jay5kZWx0YS4="/>
+      <column name="type" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" remarks="VGhlIG1hY2hpbmUtcmVhZGFibGUgbmFtZSBvZiB0aGlzIHR5cGUgZnJvbSBub2RlX3R5cGUudHlwZS4="/>
+      <primary-key name="PRIMARY" columns="module,delta,type"/>
+      <index name="type" unique="false" columns="type"/>
+    </table>
+    <table name="block_role" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="module" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" remarks="VGhlIGJsb2Nr4oCZcyBvcmlnaW4gbW9kdWxlLCBmcm9tIGJsb2NrLm1vZHVsZS4="/>
+      <column name="delta" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" remarks="VGhlIGJsb2Nr4oCZcyB1bmlxdWUgZGVsdGEgd2l0aGluIG1vZHVsZSwgZnJvbSBibG9jay5kZWx0YS4="/>
+      <column name="rid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIHVzZXLigJlzIHJvbGUgSUQgZnJvbSB1c2Vyc19yb2xlcy5yaWQu"/>
+      <primary-key name="PRIMARY" columns="module,delta,rid"/>
+      <index name="rid" unique="false" columns="rid"/>
+    </table>
+    <table name="blocked_ips" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="iid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="UHJpbWFyeSBLZXk6IHVuaXF1ZSBJRCBmb3IgSVAgYWRkcmVzc2VzLg==" autoIncrement="true"/>
+      <column name="ip" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="SVAgYWRkcmVzcw=="/>
+      <primary-key name="PRIMARY" columns="iid"/>
+      <index name="blocked_ip" unique="false" columns="ip"/>
+    </table>
+    <table name="cache" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="cid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="UHJpbWFyeSBLZXk6IFVuaXF1ZSBjYWNoZSBJRC4="/>
+      <column name="data" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="true" jdbcType="-4" remarks="QSBjb2xsZWN0aW9uIG9mIGRhdGEgdG8gY2FjaGUu"/>
+      <column name="expire" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="QSBVbml4IHRpbWVzdGFtcCBpbmRpY2F0aW5nIHdoZW4gdGhlIGNhY2hlIGVudHJ5IHNob3VsZCBleHBpcmUsIG9yIDAgZm9yIG5ldmVyLg=="/>
+      <column name="created" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="QSBVbml4IHRpbWVzdGFtcCBpbmRpY2F0aW5nIHdoZW4gdGhlIGNhY2hlIGVudHJ5IHdhcyBjcmVhdGVkLg=="/>
+      <column name="serialized" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MA==" remarks="QSBmbGFnIHRvIGluZGljYXRlIHdoZXRoZXIgY29udGVudCBpcyBzZXJpYWxpemVkICgxKSBvciBub3QgKDApLg=="/>
+      <primary-key name="PRIMARY" columns="cid"/>
+      <index name="expire" unique="false" columns="expire"/>
+    </table>
+    <table name="cache_block" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="cid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="UHJpbWFyeSBLZXk6IFVuaXF1ZSBjYWNoZSBJRC4="/>
+      <column name="data" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="true" jdbcType="-4" remarks="QSBjb2xsZWN0aW9uIG9mIGRhdGEgdG8gY2FjaGUu"/>
+      <column name="expire" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="QSBVbml4IHRpbWVzdGFtcCBpbmRpY2F0aW5nIHdoZW4gdGhlIGNhY2hlIGVudHJ5IHNob3VsZCBleHBpcmUsIG9yIDAgZm9yIG5ldmVyLg=="/>
+      <column name="created" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="QSBVbml4IHRpbWVzdGFtcCBpbmRpY2F0aW5nIHdoZW4gdGhlIGNhY2hlIGVudHJ5IHdhcyBjcmVhdGVkLg=="/>
+      <column name="serialized" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MA==" remarks="QSBmbGFnIHRvIGluZGljYXRlIHdoZXRoZXIgY29udGVudCBpcyBzZXJpYWxpemVkICgxKSBvciBub3QgKDApLg=="/>
+      <primary-key name="PRIMARY" columns="cid"/>
+      <index name="expire" unique="false" columns="expire"/>
+    </table>
+    <table name="cache_bootstrap" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="cid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="UHJpbWFyeSBLZXk6IFVuaXF1ZSBjYWNoZSBJRC4="/>
+      <column name="data" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="true" jdbcType="-4" remarks="QSBjb2xsZWN0aW9uIG9mIGRhdGEgdG8gY2FjaGUu"/>
+      <column name="expire" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="QSBVbml4IHRpbWVzdGFtcCBpbmRpY2F0aW5nIHdoZW4gdGhlIGNhY2hlIGVudHJ5IHNob3VsZCBleHBpcmUsIG9yIDAgZm9yIG5ldmVyLg=="/>
+      <column name="created" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="QSBVbml4IHRpbWVzdGFtcCBpbmRpY2F0aW5nIHdoZW4gdGhlIGNhY2hlIGVudHJ5IHdhcyBjcmVhdGVkLg=="/>
+      <column name="serialized" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MA==" remarks="QSBmbGFnIHRvIGluZGljYXRlIHdoZXRoZXIgY29udGVudCBpcyBzZXJpYWxpemVkICgxKSBvciBub3QgKDApLg=="/>
+      <primary-key name="PRIMARY" columns="cid"/>
+      <index name="expire" unique="false" columns="expire"/>
+    </table>
+    <table name="cache_field" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="cid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="UHJpbWFyeSBLZXk6IFVuaXF1ZSBjYWNoZSBJRC4="/>
+      <column name="data" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="true" jdbcType="-4" remarks="QSBjb2xsZWN0aW9uIG9mIGRhdGEgdG8gY2FjaGUu"/>
+      <column name="expire" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="QSBVbml4IHRpbWVzdGFtcCBpbmRpY2F0aW5nIHdoZW4gdGhlIGNhY2hlIGVudHJ5IHNob3VsZCBleHBpcmUsIG9yIDAgZm9yIG5ldmVyLg=="/>
+      <column name="created" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="QSBVbml4IHRpbWVzdGFtcCBpbmRpY2F0aW5nIHdoZW4gdGhlIGNhY2hlIGVudHJ5IHdhcyBjcmVhdGVkLg=="/>
+      <column name="serialized" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MA==" remarks="QSBmbGFnIHRvIGluZGljYXRlIHdoZXRoZXIgY29udGVudCBpcyBzZXJpYWxpemVkICgxKSBvciBub3QgKDApLg=="/>
+      <primary-key name="PRIMARY" columns="cid"/>
+      <index name="expire" unique="false" columns="expire"/>
+    </table>
+    <table name="cache_filter" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="cid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="UHJpbWFyeSBLZXk6IFVuaXF1ZSBjYWNoZSBJRC4="/>
+      <column name="data" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="true" jdbcType="-4" remarks="QSBjb2xsZWN0aW9uIG9mIGRhdGEgdG8gY2FjaGUu"/>
+      <column name="expire" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="QSBVbml4IHRpbWVzdGFtcCBpbmRpY2F0aW5nIHdoZW4gdGhlIGNhY2hlIGVudHJ5IHNob3VsZCBleHBpcmUsIG9yIDAgZm9yIG5ldmVyLg=="/>
+      <column name="created" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="QSBVbml4IHRpbWVzdGFtcCBpbmRpY2F0aW5nIHdoZW4gdGhlIGNhY2hlIGVudHJ5IHdhcyBjcmVhdGVkLg=="/>
+      <column name="serialized" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MA==" remarks="QSBmbGFnIHRvIGluZGljYXRlIHdoZXRoZXIgY29udGVudCBpcyBzZXJpYWxpemVkICgxKSBvciBub3QgKDApLg=="/>
+      <primary-key name="PRIMARY" columns="cid"/>
+      <index name="expire" unique="false" columns="expire"/>
+    </table>
+    <table name="cache_form" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="cid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="UHJpbWFyeSBLZXk6IFVuaXF1ZSBjYWNoZSBJRC4="/>
+      <column name="data" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="true" jdbcType="-4" remarks="QSBjb2xsZWN0aW9uIG9mIGRhdGEgdG8gY2FjaGUu"/>
+      <column name="expire" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="QSBVbml4IHRpbWVzdGFtcCBpbmRpY2F0aW5nIHdoZW4gdGhlIGNhY2hlIGVudHJ5IHNob3VsZCBleHBpcmUsIG9yIDAgZm9yIG5ldmVyLg=="/>
+      <column name="created" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="QSBVbml4IHRpbWVzdGFtcCBpbmRpY2F0aW5nIHdoZW4gdGhlIGNhY2hlIGVudHJ5IHdhcyBjcmVhdGVkLg=="/>
+      <column name="serialized" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MA==" remarks="QSBmbGFnIHRvIGluZGljYXRlIHdoZXRoZXIgY29udGVudCBpcyBzZXJpYWxpemVkICgxKSBvciBub3QgKDApLg=="/>
+      <primary-key name="PRIMARY" columns="cid"/>
+      <index name="expire" unique="false" columns="expire"/>
+    </table>
+    <table name="cache_image" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="cid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="UHJpbWFyeSBLZXk6IFVuaXF1ZSBjYWNoZSBJRC4="/>
+      <column name="data" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="true" jdbcType="-4" remarks="QSBjb2xsZWN0aW9uIG9mIGRhdGEgdG8gY2FjaGUu"/>
+      <column name="expire" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="QSBVbml4IHRpbWVzdGFtcCBpbmRpY2F0aW5nIHdoZW4gdGhlIGNhY2hlIGVudHJ5IHNob3VsZCBleHBpcmUsIG9yIDAgZm9yIG5ldmVyLg=="/>
+      <column name="created" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="QSBVbml4IHRpbWVzdGFtcCBpbmRpY2F0aW5nIHdoZW4gdGhlIGNhY2hlIGVudHJ5IHdhcyBjcmVhdGVkLg=="/>
+      <column name="serialized" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MA==" remarks="QSBmbGFnIHRvIGluZGljYXRlIHdoZXRoZXIgY29udGVudCBpcyBzZXJpYWxpemVkICgxKSBvciBub3QgKDApLg=="/>
+      <primary-key name="PRIMARY" columns="cid"/>
+      <index name="expire" unique="false" columns="expire"/>
+    </table>
+    <table name="cache_menu" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="cid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="UHJpbWFyeSBLZXk6IFVuaXF1ZSBjYWNoZSBJRC4="/>
+      <column name="data" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="true" jdbcType="-4" remarks="QSBjb2xsZWN0aW9uIG9mIGRhdGEgdG8gY2FjaGUu"/>
+      <column name="expire" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="QSBVbml4IHRpbWVzdGFtcCBpbmRpY2F0aW5nIHdoZW4gdGhlIGNhY2hlIGVudHJ5IHNob3VsZCBleHBpcmUsIG9yIDAgZm9yIG5ldmVyLg=="/>
+      <column name="created" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="QSBVbml4IHRpbWVzdGFtcCBpbmRpY2F0aW5nIHdoZW4gdGhlIGNhY2hlIGVudHJ5IHdhcyBjcmVhdGVkLg=="/>
+      <column name="serialized" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MA==" remarks="QSBmbGFnIHRvIGluZGljYXRlIHdoZXRoZXIgY29udGVudCBpcyBzZXJpYWxpemVkICgxKSBvciBub3QgKDApLg=="/>
+      <primary-key name="PRIMARY" columns="cid"/>
+      <index name="expire" unique="false" columns="expire"/>
+    </table>
+    <table name="cache_page" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="cid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="UHJpbWFyeSBLZXk6IFVuaXF1ZSBjYWNoZSBJRC4="/>
+      <column name="data" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="true" jdbcType="-4" remarks="QSBjb2xsZWN0aW9uIG9mIGRhdGEgdG8gY2FjaGUu"/>
+      <column name="expire" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="QSBVbml4IHRpbWVzdGFtcCBpbmRpY2F0aW5nIHdoZW4gdGhlIGNhY2hlIGVudHJ5IHNob3VsZCBleHBpcmUsIG9yIDAgZm9yIG5ldmVyLg=="/>
+      <column name="created" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="QSBVbml4IHRpbWVzdGFtcCBpbmRpY2F0aW5nIHdoZW4gdGhlIGNhY2hlIGVudHJ5IHdhcyBjcmVhdGVkLg=="/>
+      <column name="serialized" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MA==" remarks="QSBmbGFnIHRvIGluZGljYXRlIHdoZXRoZXIgY29udGVudCBpcyBzZXJpYWxpemVkICgxKSBvciBub3QgKDApLg=="/>
+      <primary-key name="PRIMARY" columns="cid"/>
+      <index name="expire" unique="false" columns="expire"/>
+    </table>
+    <table name="cache_path" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="cid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="UHJpbWFyeSBLZXk6IFVuaXF1ZSBjYWNoZSBJRC4="/>
+      <column name="data" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="true" jdbcType="-4" remarks="QSBjb2xsZWN0aW9uIG9mIGRhdGEgdG8gY2FjaGUu"/>
+      <column name="expire" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="QSBVbml4IHRpbWVzdGFtcCBpbmRpY2F0aW5nIHdoZW4gdGhlIGNhY2hlIGVudHJ5IHNob3VsZCBleHBpcmUsIG9yIDAgZm9yIG5ldmVyLg=="/>
+      <column name="created" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="QSBVbml4IHRpbWVzdGFtcCBpbmRpY2F0aW5nIHdoZW4gdGhlIGNhY2hlIGVudHJ5IHdhcyBjcmVhdGVkLg=="/>
+      <column name="serialized" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MA==" remarks="QSBmbGFnIHRvIGluZGljYXRlIHdoZXRoZXIgY29udGVudCBpcyBzZXJpYWxpemVkICgxKSBvciBub3QgKDApLg=="/>
+      <primary-key name="PRIMARY" columns="cid"/>
+      <index name="expire" unique="false" columns="expire"/>
+    </table>
+    <table name="cache_update" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="cid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="UHJpbWFyeSBLZXk6IFVuaXF1ZSBjYWNoZSBJRC4="/>
+      <column name="data" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="true" jdbcType="-4" remarks="QSBjb2xsZWN0aW9uIG9mIGRhdGEgdG8gY2FjaGUu"/>
+      <column name="expire" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="QSBVbml4IHRpbWVzdGFtcCBpbmRpY2F0aW5nIHdoZW4gdGhlIGNhY2hlIGVudHJ5IHNob3VsZCBleHBpcmUsIG9yIDAgZm9yIG5ldmVyLg=="/>
+      <column name="created" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="QSBVbml4IHRpbWVzdGFtcCBpbmRpY2F0aW5nIHdoZW4gdGhlIGNhY2hlIGVudHJ5IHdhcyBjcmVhdGVkLg=="/>
+      <column name="serialized" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MA==" remarks="QSBmbGFnIHRvIGluZGljYXRlIHdoZXRoZXIgY29udGVudCBpcyBzZXJpYWxpemVkICgxKSBvciBub3QgKDApLg=="/>
+      <primary-key name="PRIMARY" columns="cid"/>
+      <index name="expire" unique="false" columns="expire"/>
+    </table>
+    <table name="comment" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="cid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="UHJpbWFyeSBLZXk6IFVuaXF1ZSBjb21tZW50IElELg==" autoIncrement="true"/>
+      <column name="pid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIGNvbW1lbnQuY2lkIHRvIHdoaWNoIHRoaXMgY29tbWVudCBpcyBhIHJlcGx5LiBJZiBzZXQgdG8gMCwgdGhpcyBjb21tZW50IGlzIG5vdCBhIHJlcGx5IHRvIGFuIGV4aXN0aW5nIGNvbW1lbnQu"/>
+      <column name="nid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIG5vZGUubmlkIHRvIHdoaWNoIHRoaXMgY29tbWVudCBpcyBhIHJlcGx5Lg=="/>
+      <column name="uid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHVzZXJzLnVpZCB3aG8gYXV0aG9yZWQgdGhlIGNvbW1lbnQuIElmIHNldCB0byAwLCB0aGlzIGNvbW1lbnQgd2FzIGNyZWF0ZWQgYnkgYW4gYW5vbnltb3VzIHVzZXIu"/>
+      <column name="subject" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGNvbW1lbnQgdGl0bGUu"/>
+      <column name="hostname" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGF1dGhvcuKAmXMgaG9zdCBuYW1lLg=="/>
+      <column name="created" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHRpbWUgdGhhdCB0aGUgY29tbWVudCB3YXMgY3JlYXRlZCwgYXMgYSBVbml4IHRpbWVzdGFtcC4="/>
+      <column name="changed" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHRpbWUgdGhhdCB0aGUgY29tbWVudCB3YXMgbGFzdCBlZGl0ZWQsIGFzIGEgVW5peCB0aW1lc3RhbXAu"/>
+      <column name="status" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ==" remarks="VGhlIHB1Ymxpc2hlZCBzdGF0dXMgb2YgYSBjb21tZW50LiAoMCA9IE5vdCBQdWJsaXNoZWQsIDEgPSBQdWJsaXNoZWQp"/>
+      <column name="thread" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="VGhlIHZhbmNvZGUgcmVwcmVzZW50YXRpb24gb2YgdGhlIGNvbW1lbnTigJlzIHBsYWNlIGluIGEgdGhyZWFkLg=="/>
+      <column name="name" sqlType="VARCHAR" precision="60" scale="0" nullable="true" jdbcType="12" remarks="VGhlIGNvbW1lbnQgYXV0aG9y4oCZcyBuYW1lLiBVc2VzIHVzZXJzLm5hbWUgaWYgdGhlIHVzZXIgaXMgbG9nZ2VkIGluLCBvdGhlcndpc2UgdXNlcyB0aGUgdmFsdWUgdHlwZWQgaW50byB0aGUgY29tbWVudCBmb3JtLg=="/>
+      <column name="mail" sqlType="VARCHAR" precision="64" scale="0" nullable="true" jdbcType="12" remarks="VGhlIGNvbW1lbnQgYXV0aG9y4oCZcyBlLW1haWwgYWRkcmVzcyBmcm9tIHRoZSBjb21tZW50IGZvcm0sIGlmIHVzZXIgaXMgYW5vbnltb3VzLCBhbmQgdGhlIOKAmUFub255bW91cyB1c2VycyBtYXkvbXVzdCBsZWF2ZSB0aGVpciBjb250YWN0IGluZm9ybWF0aW9u4oCZIHNldHRpbmcgaXMgdHVybmVkIG9uLg=="/>
+      <column name="homepage" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="VGhlIGNvbW1lbnQgYXV0aG9y4oCZcyBob21lIHBhZ2UgYWRkcmVzcyBmcm9tIHRoZSBjb21tZW50IGZvcm0sIGlmIHVzZXIgaXMgYW5vbnltb3VzLCBhbmQgdGhlIOKAmUFub255bW91cyB1c2VycyBtYXkvbXVzdCBsZWF2ZSB0aGVpciBjb250YWN0IGluZm9ybWF0aW9u4oCZIHNldHRpbmcgaXMgdHVybmVkIG9uLg=="/>
+      <column name="language" sqlType="VARCHAR" precision="12" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGxhbmd1YWdlcy5sYW5ndWFnZSBvZiB0aGlzIGNvbW1lbnQu"/>
+      <primary-key name="PRIMARY" columns="cid"/>
+      <index name="comment_created" unique="false" columns="created"/>
+      <index name="comment_nid_language" unique="false" columns="nid,language"/>
+      <index name="comment_num_new" unique="false" columns="nid,status,created,cid,thread"/>
+      <index name="comment_status_pid" unique="false" columns="pid,status"/>
+      <index name="comment_uid" unique="false" columns="uid"/>
+    </table>
+    <table name="date_format_locale" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="format" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" remarks="VGhlIGRhdGUgZm9ybWF0IHN0cmluZy4="/>
+      <column name="type" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" remarks="VGhlIGRhdGUgZm9ybWF0IHR5cGUsIGUuZy4gbWVkaXVtLg=="/>
+      <column name="language" sqlType="VARCHAR" precision="12" scale="0" nullable="false" jdbcType="12" remarks="QSBsYW5ndWFnZXMubGFuZ3VhZ2UgZm9yIHRoaXMgZm9ybWF0IHRvIGJlIHVzZWQgd2l0aC4="/>
+      <primary-key name="PRIMARY" columns="type,language"/>
+    </table>
+    <table name="date_format_type" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="type" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" remarks="VGhlIGRhdGUgZm9ybWF0IHR5cGUsIGUuZy4gbWVkaXVtLg=="/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="VGhlIGh1bWFuIHJlYWRhYmxlIG5hbWUgb2YgdGhlIGZvcm1hdCB0eXBlLg=="/>
+      <column name="locked" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="V2hldGhlciBvciBub3QgdGhpcyBpcyBhIHN5c3RlbSBwcm92aWRlZCBmb3JtYXQu"/>
+      <primary-key name="PRIMARY" columns="type"/>
+      <index name="title" unique="false" columns="title"/>
+    </table>
+    <table name="date_formats" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="dfid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIGRhdGUgZm9ybWF0IGlkZW50aWZpZXIu" autoIncrement="true"/>
+      <column name="format" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" remarks="VGhlIGRhdGUgZm9ybWF0IHN0cmluZy4="/>
+      <column name="type" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" remarks="VGhlIGRhdGUgZm9ybWF0IHR5cGUsIGUuZy4gbWVkaXVtLg=="/>
+      <column name="locked" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="V2hldGhlciBvciBub3QgdGhpcyBmb3JtYXQgY2FuIGJlIG1vZGlmaWVkLg=="/>
+      <primary-key name="PRIMARY" columns="dfid"/>
+      <index name="formats" unique="true" columns="format,type"/>
+    </table>
+    <table name="field_config" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIHByaW1hcnkgaWRlbnRpZmllciBmb3IgYSBmaWVsZA==" autoIncrement="true"/>
+      <column name="field_name" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" remarks="VGhlIG5hbWUgb2YgdGhpcyBmaWVsZC4gTm9uLWRlbGV0ZWQgZmllbGQgbmFtZXMgYXJlIHVuaXF1ZSwgYnV0IG11bHRpcGxlIGRlbGV0ZWQgZmllbGRzIGNhbiBoYXZlIHRoZSBzYW1lIG5hbWUu"/>
+      <column name="type" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" remarks="VGhlIHR5cGUgb2YgdGhpcyBmaWVsZC4="/>
+      <column name="module" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIG1vZHVsZSB0aGF0IGltcGxlbWVudHMgdGhlIGZpZWxkIHR5cGUu"/>
+      <column name="active" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="Qm9vbGVhbiBpbmRpY2F0aW5nIHdoZXRoZXIgdGhlIG1vZHVsZSB0aGF0IGltcGxlbWVudHMgdGhlIGZpZWxkIHR5cGUgaXMgZW5hYmxlZC4="/>
+      <column name="storage_type" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" remarks="VGhlIHN0b3JhZ2UgYmFja2VuZCBmb3IgdGhlIGZpZWxkLg=="/>
+      <column name="storage_module" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIG1vZHVsZSB0aGF0IGltcGxlbWVudHMgdGhlIHN0b3JhZ2UgYmFja2VuZC4="/>
+      <column name="storage_active" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="Qm9vbGVhbiBpbmRpY2F0aW5nIHdoZXRoZXIgdGhlIG1vZHVsZSB0aGF0IGltcGxlbWVudHMgdGhlIHN0b3JhZ2UgYmFja2VuZCBpcyBlbmFibGVkLg=="/>
+      <column name="locked" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="QFRPRE8="/>
+      <column name="data" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="false" jdbcType="-4" remarks="U2VyaWFsaXplZCBkYXRhIGNvbnRhaW5pbmcgdGhlIGZpZWxkIHByb3BlcnRpZXMgdGhhdCBkbyBub3Qgd2FycmFudCBhIGRlZGljYXRlZCBjb2x1bW4u"/>
+      <column name="cardinality" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="translatable" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="deleted" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="active" unique="false" columns="active"/>
+      <index name="deleted" unique="false" columns="deleted"/>
+      <index name="field_name" unique="false" columns="field_name"/>
+      <index name="module" unique="false" columns="module"/>
+      <index name="storage_active" unique="false" columns="storage_active"/>
+      <index name="storage_module" unique="false" columns="storage_module"/>
+      <index name="storage_type" unique="false" columns="storage_type"/>
+      <index name="type" unique="false" columns="type"/>
+    </table>
+    <table name="field_config_instance" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIHByaW1hcnkgaWRlbnRpZmllciBmb3IgYSBmaWVsZCBpbnN0YW5jZQ==" autoIncrement="true"/>
+      <column name="field_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIGlkZW50aWZpZXIgb2YgdGhlIGZpZWxkIGF0dGFjaGVkIGJ5IHRoaXMgaW5zdGFuY2U="/>
+      <column name="field_name" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="entity_type" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="bundle" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="data" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="false" jdbcType="-4"/>
+      <column name="deleted" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="deleted" unique="false" columns="deleted"/>
+      <index name="field_name_bundle" unique="false" columns="field_name,entity_type,bundle"/>
+    </table>
+    <table name="field_data_body" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="entity_type" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGVudGl0eSB0eXBlIHRoaXMgZGF0YSBpcyBhdHRhY2hlZCB0bw=="/>
+      <column name="bundle" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGZpZWxkIGluc3RhbmNlIGJ1bmRsZSB0byB3aGljaCB0aGlzIHJvdyBiZWxvbmdzLCB1c2VkIHdoZW4gZGVsZXRpbmcgYSBmaWVsZCBpbnN0YW5jZQ=="/>
+      <column name="deleted" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="QSBib29sZWFuIGluZGljYXRpbmcgd2hldGhlciB0aGlzIGRhdGEgaXRlbSBoYXMgYmVlbiBkZWxldGVk"/>
+      <column name="entity_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIGVudGl0eSBpZCB0aGlzIGRhdGEgaXMgYXR0YWNoZWQgdG8="/>
+      <column name="revision_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4" remarks="VGhlIGVudGl0eSByZXZpc2lvbiBpZCB0aGlzIGRhdGEgaXMgYXR0YWNoZWQgdG8sIG9yIE5VTEwgaWYgdGhlIGVudGl0eSB0eXBlIGlzIG5vdCB2ZXJzaW9uZWQ="/>
+      <column name="language" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGxhbmd1YWdlIGZvciB0aGlzIGRhdGEgaXRlbS4="/>
+      <column name="delta" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIHNlcXVlbmNlIG51bWJlciBmb3IgdGhpcyBkYXRhIGl0ZW0sIHVzZWQgZm9yIG11bHRpLXZhbHVlIGZpZWxkcw=="/>
+      <column name="body_value" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="body_summary" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="body_format" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="entity_type,entity_id,deleted,delta,language"/>
+      <index name="body_format" unique="false" columns="body_format"/>
+      <index name="bundle" unique="false" columns="bundle"/>
+      <index name="deleted" unique="false" columns="deleted"/>
+      <index name="entity_id" unique="false" columns="entity_id"/>
+      <index name="entity_type" unique="false" columns="entity_type"/>
+      <index name="language" unique="false" columns="language"/>
+      <index name="revision_id" unique="false" columns="revision_id"/>
+    </table>
+    <table name="field_data_comment_body" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="entity_type" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGVudGl0eSB0eXBlIHRoaXMgZGF0YSBpcyBhdHRhY2hlZCB0bw=="/>
+      <column name="bundle" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGZpZWxkIGluc3RhbmNlIGJ1bmRsZSB0byB3aGljaCB0aGlzIHJvdyBiZWxvbmdzLCB1c2VkIHdoZW4gZGVsZXRpbmcgYSBmaWVsZCBpbnN0YW5jZQ=="/>
+      <column name="deleted" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="QSBib29sZWFuIGluZGljYXRpbmcgd2hldGhlciB0aGlzIGRhdGEgaXRlbSBoYXMgYmVlbiBkZWxldGVk"/>
+      <column name="entity_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIGVudGl0eSBpZCB0aGlzIGRhdGEgaXMgYXR0YWNoZWQgdG8="/>
+      <column name="revision_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4" remarks="VGhlIGVudGl0eSByZXZpc2lvbiBpZCB0aGlzIGRhdGEgaXMgYXR0YWNoZWQgdG8sIG9yIE5VTEwgaWYgdGhlIGVudGl0eSB0eXBlIGlzIG5vdCB2ZXJzaW9uZWQ="/>
+      <column name="language" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGxhbmd1YWdlIGZvciB0aGlzIGRhdGEgaXRlbS4="/>
+      <column name="delta" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIHNlcXVlbmNlIG51bWJlciBmb3IgdGhpcyBkYXRhIGl0ZW0sIHVzZWQgZm9yIG11bHRpLXZhbHVlIGZpZWxkcw=="/>
+      <column name="comment_body_value" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="comment_body_format" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="entity_type,entity_id,deleted,delta,language"/>
+      <index name="bundle" unique="false" columns="bundle"/>
+      <index name="comment_body_format" unique="false" columns="comment_body_format"/>
+      <index name="deleted" unique="false" columns="deleted"/>
+      <index name="entity_id" unique="false" columns="entity_id"/>
+      <index name="entity_type" unique="false" columns="entity_type"/>
+      <index name="language" unique="false" columns="language"/>
+      <index name="revision_id" unique="false" columns="revision_id"/>
+    </table>
+    <table name="field_data_field_image" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="entity_type" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGVudGl0eSB0eXBlIHRoaXMgZGF0YSBpcyBhdHRhY2hlZCB0bw=="/>
+      <column name="bundle" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGZpZWxkIGluc3RhbmNlIGJ1bmRsZSB0byB3aGljaCB0aGlzIHJvdyBiZWxvbmdzLCB1c2VkIHdoZW4gZGVsZXRpbmcgYSBmaWVsZCBpbnN0YW5jZQ=="/>
+      <column name="deleted" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="QSBib29sZWFuIGluZGljYXRpbmcgd2hldGhlciB0aGlzIGRhdGEgaXRlbSBoYXMgYmVlbiBkZWxldGVk"/>
+      <column name="entity_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIGVudGl0eSBpZCB0aGlzIGRhdGEgaXMgYXR0YWNoZWQgdG8="/>
+      <column name="revision_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4" remarks="VGhlIGVudGl0eSByZXZpc2lvbiBpZCB0aGlzIGRhdGEgaXMgYXR0YWNoZWQgdG8sIG9yIE5VTEwgaWYgdGhlIGVudGl0eSB0eXBlIGlzIG5vdCB2ZXJzaW9uZWQ="/>
+      <column name="language" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGxhbmd1YWdlIGZvciB0aGlzIGRhdGEgaXRlbS4="/>
+      <column name="delta" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIHNlcXVlbmNlIG51bWJlciBmb3IgdGhpcyBkYXRhIGl0ZW0sIHVzZWQgZm9yIG11bHRpLXZhbHVlIGZpZWxkcw=="/>
+      <column name="field_image_fid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4" remarks="VGhlIGZpbGVfbWFuYWdlZC5maWQgYmVpbmcgcmVmZXJlbmNlZCBpbiB0aGlzIGZpZWxkLg=="/>
+      <column name="field_image_alt" sqlType="VARCHAR" precision="512" scale="0" nullable="true" jdbcType="12" remarks="QWx0ZXJuYXRpdmUgaW1hZ2UgdGV4dCwgZm9yIHRoZSBpbWFnZeKAmXMg4oCZYWx04oCZIGF0dHJpYnV0ZS4="/>
+      <column name="field_image_title" sqlType="VARCHAR" precision="1024" scale="0" nullable="true" jdbcType="12" remarks="SW1hZ2UgdGl0bGUgdGV4dCwgZm9yIHRoZSBpbWFnZeKAmXMg4oCZdGl0bGXigJkgYXR0cmlidXRlLg=="/>
+      <column name="field_image_width" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4" remarks="VGhlIHdpZHRoIG9mIHRoZSBpbWFnZSBpbiBwaXhlbHMu"/>
+      <column name="field_image_height" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4" remarks="VGhlIGhlaWdodCBvZiB0aGUgaW1hZ2UgaW4gcGl4ZWxzLg=="/>
+      <primary-key name="PRIMARY" columns="entity_type,entity_id,deleted,delta,language"/>
+      <index name="bundle" unique="false" columns="bundle"/>
+      <index name="deleted" unique="false" columns="deleted"/>
+      <index name="entity_id" unique="false" columns="entity_id"/>
+      <index name="entity_type" unique="false" columns="entity_type"/>
+      <index name="field_image_fid" unique="false" columns="field_image_fid"/>
+      <index name="language" unique="false" columns="language"/>
+      <index name="revision_id" unique="false" columns="revision_id"/>
+    </table>
+    <table name="field_data_field_tags" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="entity_type" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGVudGl0eSB0eXBlIHRoaXMgZGF0YSBpcyBhdHRhY2hlZCB0bw=="/>
+      <column name="bundle" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGZpZWxkIGluc3RhbmNlIGJ1bmRsZSB0byB3aGljaCB0aGlzIHJvdyBiZWxvbmdzLCB1c2VkIHdoZW4gZGVsZXRpbmcgYSBmaWVsZCBpbnN0YW5jZQ=="/>
+      <column name="deleted" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="QSBib29sZWFuIGluZGljYXRpbmcgd2hldGhlciB0aGlzIGRhdGEgaXRlbSBoYXMgYmVlbiBkZWxldGVk"/>
+      <column name="entity_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIGVudGl0eSBpZCB0aGlzIGRhdGEgaXMgYXR0YWNoZWQgdG8="/>
+      <column name="revision_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4" remarks="VGhlIGVudGl0eSByZXZpc2lvbiBpZCB0aGlzIGRhdGEgaXMgYXR0YWNoZWQgdG8sIG9yIE5VTEwgaWYgdGhlIGVudGl0eSB0eXBlIGlzIG5vdCB2ZXJzaW9uZWQ="/>
+      <column name="language" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGxhbmd1YWdlIGZvciB0aGlzIGRhdGEgaXRlbS4="/>
+      <column name="delta" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIHNlcXVlbmNlIG51bWJlciBmb3IgdGhpcyBkYXRhIGl0ZW0sIHVzZWQgZm9yIG11bHRpLXZhbHVlIGZpZWxkcw=="/>
+      <column name="field_tags_tid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="entity_type,entity_id,deleted,delta,language"/>
+      <index name="bundle" unique="false" columns="bundle"/>
+      <index name="deleted" unique="false" columns="deleted"/>
+      <index name="entity_id" unique="false" columns="entity_id"/>
+      <index name="entity_type" unique="false" columns="entity_type"/>
+      <index name="field_tags_tid" unique="false" columns="field_tags_tid"/>
+      <index name="language" unique="false" columns="language"/>
+      <index name="revision_id" unique="false" columns="revision_id"/>
+    </table>
+    <table name="field_revision_body" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="entity_type" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGVudGl0eSB0eXBlIHRoaXMgZGF0YSBpcyBhdHRhY2hlZCB0bw=="/>
+      <column name="bundle" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGZpZWxkIGluc3RhbmNlIGJ1bmRsZSB0byB3aGljaCB0aGlzIHJvdyBiZWxvbmdzLCB1c2VkIHdoZW4gZGVsZXRpbmcgYSBmaWVsZCBpbnN0YW5jZQ=="/>
+      <column name="deleted" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="QSBib29sZWFuIGluZGljYXRpbmcgd2hldGhlciB0aGlzIGRhdGEgaXRlbSBoYXMgYmVlbiBkZWxldGVk"/>
+      <column name="entity_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIGVudGl0eSBpZCB0aGlzIGRhdGEgaXMgYXR0YWNoZWQgdG8="/>
+      <column name="revision_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIGVudGl0eSByZXZpc2lvbiBpZCB0aGlzIGRhdGEgaXMgYXR0YWNoZWQgdG8="/>
+      <column name="language" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGxhbmd1YWdlIGZvciB0aGlzIGRhdGEgaXRlbS4="/>
+      <column name="delta" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIHNlcXVlbmNlIG51bWJlciBmb3IgdGhpcyBkYXRhIGl0ZW0sIHVzZWQgZm9yIG11bHRpLXZhbHVlIGZpZWxkcw=="/>
+      <column name="body_value" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="body_summary" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="body_format" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="entity_type,entity_id,revision_id,deleted,delta,language"/>
+      <index name="body_format" unique="false" columns="body_format"/>
+      <index name="bundle" unique="false" columns="bundle"/>
+      <index name="deleted" unique="false" columns="deleted"/>
+      <index name="entity_id" unique="false" columns="entity_id"/>
+      <index name="entity_type" unique="false" columns="entity_type"/>
+      <index name="language" unique="false" columns="language"/>
+      <index name="revision_id" unique="false" columns="revision_id"/>
+    </table>
+    <table name="field_revision_comment_body" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="entity_type" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGVudGl0eSB0eXBlIHRoaXMgZGF0YSBpcyBhdHRhY2hlZCB0bw=="/>
+      <column name="bundle" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGZpZWxkIGluc3RhbmNlIGJ1bmRsZSB0byB3aGljaCB0aGlzIHJvdyBiZWxvbmdzLCB1c2VkIHdoZW4gZGVsZXRpbmcgYSBmaWVsZCBpbnN0YW5jZQ=="/>
+      <column name="deleted" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="QSBib29sZWFuIGluZGljYXRpbmcgd2hldGhlciB0aGlzIGRhdGEgaXRlbSBoYXMgYmVlbiBkZWxldGVk"/>
+      <column name="entity_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIGVudGl0eSBpZCB0aGlzIGRhdGEgaXMgYXR0YWNoZWQgdG8="/>
+      <column name="revision_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIGVudGl0eSByZXZpc2lvbiBpZCB0aGlzIGRhdGEgaXMgYXR0YWNoZWQgdG8="/>
+      <column name="language" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGxhbmd1YWdlIGZvciB0aGlzIGRhdGEgaXRlbS4="/>
+      <column name="delta" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIHNlcXVlbmNlIG51bWJlciBmb3IgdGhpcyBkYXRhIGl0ZW0sIHVzZWQgZm9yIG11bHRpLXZhbHVlIGZpZWxkcw=="/>
+      <column name="comment_body_value" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="comment_body_format" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="entity_type,entity_id,revision_id,deleted,delta,language"/>
+      <index name="bundle" unique="false" columns="bundle"/>
+      <index name="comment_body_format" unique="false" columns="comment_body_format"/>
+      <index name="deleted" unique="false" columns="deleted"/>
+      <index name="entity_id" unique="false" columns="entity_id"/>
+      <index name="entity_type" unique="false" columns="entity_type"/>
+      <index name="language" unique="false" columns="language"/>
+      <index name="revision_id" unique="false" columns="revision_id"/>
+    </table>
+    <table name="field_revision_field_image" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="entity_type" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGVudGl0eSB0eXBlIHRoaXMgZGF0YSBpcyBhdHRhY2hlZCB0bw=="/>
+      <column name="bundle" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGZpZWxkIGluc3RhbmNlIGJ1bmRsZSB0byB3aGljaCB0aGlzIHJvdyBiZWxvbmdzLCB1c2VkIHdoZW4gZGVsZXRpbmcgYSBmaWVsZCBpbnN0YW5jZQ=="/>
+      <column name="deleted" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="QSBib29sZWFuIGluZGljYXRpbmcgd2hldGhlciB0aGlzIGRhdGEgaXRlbSBoYXMgYmVlbiBkZWxldGVk"/>
+      <column name="entity_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIGVudGl0eSBpZCB0aGlzIGRhdGEgaXMgYXR0YWNoZWQgdG8="/>
+      <column name="revision_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIGVudGl0eSByZXZpc2lvbiBpZCB0aGlzIGRhdGEgaXMgYXR0YWNoZWQgdG8="/>
+      <column name="language" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGxhbmd1YWdlIGZvciB0aGlzIGRhdGEgaXRlbS4="/>
+      <column name="delta" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIHNlcXVlbmNlIG51bWJlciBmb3IgdGhpcyBkYXRhIGl0ZW0sIHVzZWQgZm9yIG11bHRpLXZhbHVlIGZpZWxkcw=="/>
+      <column name="field_image_fid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4" remarks="VGhlIGZpbGVfbWFuYWdlZC5maWQgYmVpbmcgcmVmZXJlbmNlZCBpbiB0aGlzIGZpZWxkLg=="/>
+      <column name="field_image_alt" sqlType="VARCHAR" precision="512" scale="0" nullable="true" jdbcType="12" remarks="QWx0ZXJuYXRpdmUgaW1hZ2UgdGV4dCwgZm9yIHRoZSBpbWFnZeKAmXMg4oCZYWx04oCZIGF0dHJpYnV0ZS4="/>
+      <column name="field_image_title" sqlType="VARCHAR" precision="1024" scale="0" nullable="true" jdbcType="12" remarks="SW1hZ2UgdGl0bGUgdGV4dCwgZm9yIHRoZSBpbWFnZeKAmXMg4oCZdGl0bGXigJkgYXR0cmlidXRlLg=="/>
+      <column name="field_image_width" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4" remarks="VGhlIHdpZHRoIG9mIHRoZSBpbWFnZSBpbiBwaXhlbHMu"/>
+      <column name="field_image_height" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4" remarks="VGhlIGhlaWdodCBvZiB0aGUgaW1hZ2UgaW4gcGl4ZWxzLg=="/>
+      <primary-key name="PRIMARY" columns="entity_type,entity_id,revision_id,deleted,delta,language"/>
+      <index name="bundle" unique="false" columns="bundle"/>
+      <index name="deleted" unique="false" columns="deleted"/>
+      <index name="entity_id" unique="false" columns="entity_id"/>
+      <index name="entity_type" unique="false" columns="entity_type"/>
+      <index name="field_image_fid" unique="false" columns="field_image_fid"/>
+      <index name="language" unique="false" columns="language"/>
+      <index name="revision_id" unique="false" columns="revision_id"/>
+    </table>
+    <table name="field_revision_field_tags" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="entity_type" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGVudGl0eSB0eXBlIHRoaXMgZGF0YSBpcyBhdHRhY2hlZCB0bw=="/>
+      <column name="bundle" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGZpZWxkIGluc3RhbmNlIGJ1bmRsZSB0byB3aGljaCB0aGlzIHJvdyBiZWxvbmdzLCB1c2VkIHdoZW4gZGVsZXRpbmcgYSBmaWVsZCBpbnN0YW5jZQ=="/>
+      <column name="deleted" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="QSBib29sZWFuIGluZGljYXRpbmcgd2hldGhlciB0aGlzIGRhdGEgaXRlbSBoYXMgYmVlbiBkZWxldGVk"/>
+      <column name="entity_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIGVudGl0eSBpZCB0aGlzIGRhdGEgaXMgYXR0YWNoZWQgdG8="/>
+      <column name="revision_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIGVudGl0eSByZXZpc2lvbiBpZCB0aGlzIGRhdGEgaXMgYXR0YWNoZWQgdG8="/>
+      <column name="language" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGxhbmd1YWdlIGZvciB0aGlzIGRhdGEgaXRlbS4="/>
+      <column name="delta" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIHNlcXVlbmNlIG51bWJlciBmb3IgdGhpcyBkYXRhIGl0ZW0sIHVzZWQgZm9yIG11bHRpLXZhbHVlIGZpZWxkcw=="/>
+      <column name="field_tags_tid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="entity_type,entity_id,revision_id,deleted,delta,language"/>
+      <index name="bundle" unique="false" columns="bundle"/>
+      <index name="deleted" unique="false" columns="deleted"/>
+      <index name="entity_id" unique="false" columns="entity_id"/>
+      <index name="entity_type" unique="false" columns="entity_type"/>
+      <index name="field_tags_tid" unique="false" columns="field_tags_tid"/>
+      <index name="language" unique="false" columns="language"/>
+      <index name="revision_id" unique="false" columns="revision_id"/>
+    </table>
+    <table name="file_managed" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="fid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="RmlsZSBJRC4=" autoIncrement="true"/>
+      <column name="uid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHVzZXJzLnVpZCBvZiB0aGUgdXNlciB3aG8gaXMgYXNzb2NpYXRlZCB3aXRoIHRoZSBmaWxlLg=="/>
+      <column name="filename" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="TmFtZSBvZiB0aGUgZmlsZSB3aXRoIG5vIHBhdGggY29tcG9uZW50cy4gVGhpcyBtYXkgZGlmZmVyIGZyb20gdGhlIGJhc2VuYW1lIG9mIHRoZSBVUkkgaWYgdGhlIGZpbGUgaXMgcmVuYW1lZCB0byBhdm9pZCBvdmVyd3JpdGluZyBhbiBleGlzdGluZyBmaWxlLg=="/>
+      <column name="uri" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIFVSSSB0byBhY2Nlc3MgdGhlIGZpbGUgKGVpdGhlciBsb2NhbCBvciByZW1vdGUpLg=="/>
+      <column name="filemime" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGZpbGXigJlzIE1JTUUgdHlwZS4="/>
+      <column name="filesize" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="VGhlIHNpemUgb2YgdGhlIGZpbGUgaW4gYnl0ZXMu"/>
+      <column name="status" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="QSBmaWVsZCBpbmRpY2F0aW5nIHRoZSBzdGF0dXMgb2YgdGhlIGZpbGUuIFR3byBzdGF0dXMgYXJlIGRlZmluZWQgaW4gY29yZTogdGVtcG9yYXJ5ICgwKSBhbmQgcGVybWFuZW50ICgxKS4gVGVtcG9yYXJ5IGZpbGVzIG9sZGVyIHRoYW4gRFJVUEFMX01BWElNVU1fVEVNUF9GSUxFX0FHRSB3aWxsIGJlIHJlbW92ZWQgZHVyaW5nIGEgY3JvbiBydW4u"/>
+      <column name="timestamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VU5JWCB0aW1lc3RhbXAgZm9yIHdoZW4gdGhlIGZpbGUgd2FzIGFkZGVkLg=="/>
+      <primary-key name="PRIMARY" columns="fid"/>
+      <index name="uri" unique="true" columns="uri"/>
+      <index name="status" unique="false" columns="status"/>
+      <index name="timestamp" unique="false" columns="timestamp"/>
+      <index name="uid" unique="false" columns="uid"/>
+    </table>
+    <table name="file_usage" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="fid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="RmlsZSBJRC4="/>
+      <column name="module" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIG5hbWUgb2YgdGhlIG1vZHVsZSB0aGF0IGlzIHVzaW5nIHRoZSBmaWxlLg=="/>
+      <column name="type" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIG5hbWUgb2YgdGhlIG9iamVjdCB0eXBlIGluIHdoaWNoIHRoZSBmaWxlIGlzIHVzZWQu"/>
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHByaW1hcnkga2V5IG9mIHRoZSBvYmplY3QgdXNpbmcgdGhlIGZpbGUu"/>
+      <column name="count" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIG51bWJlciBvZiB0aW1lcyB0aGlzIGZpbGUgaXMgdXNlZCBieSB0aGlzIG9iamVjdC4="/>
+      <primary-key name="PRIMARY" columns="fid,type,id,module"/>
+      <index name="fid_count" unique="false" columns="fid,count"/>
+      <index name="fid_module" unique="false" columns="fid,module"/>
+      <index name="type_id" unique="false" columns="type,id"/>
+    </table>
+    <table name="filter" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="format" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="Rm9yZWlnbiBrZXk6IFRoZSBmaWx0ZXJfZm9ybWF0LmZvcm1hdCB0byB3aGljaCB0aGlzIGZpbHRlciBpcyBhc3NpZ25lZC4="/>
+      <column name="module" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIG9yaWdpbiBtb2R1bGUgb2YgdGhlIGZpbHRlci4="/>
+      <column name="name" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="TmFtZSBvZiB0aGUgZmlsdGVyIGJlaW5nIHJlZmVyZW5jZWQu"/>
+      <column name="weight" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="V2VpZ2h0IG9mIGZpbHRlciB3aXRoaW4gZm9ybWF0Lg=="/>
+      <column name="status" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="RmlsdGVyIGVuYWJsZWQgc3RhdHVzLiAoMSA9IGVuYWJsZWQsIDAgPSBkaXNhYmxlZCk="/>
+      <column name="settings" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="true" jdbcType="-4" remarks="QSBzZXJpYWxpemVkIGFycmF5IG9mIG5hbWUgdmFsdWUgcGFpcnMgdGhhdCBzdG9yZSB0aGUgZmlsdGVyIHNldHRpbmdzIGZvciB0aGUgc3BlY2lmaWMgZm9ybWF0Lg=="/>
+      <primary-key name="PRIMARY" columns="format,name"/>
+      <index name="list" unique="false" columns="weight,module,name"/>
+    </table>
+    <table name="filter_format" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="format" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="UHJpbWFyeSBLZXk6IFVuaXF1ZSBtYWNoaW5lIG5hbWUgb2YgdGhlIGZvcm1hdC4="/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="TmFtZSBvZiB0aGUgdGV4dCBmb3JtYXQgKEZpbHRlcmVkIEhUTUwpLg=="/>
+      <column name="cache" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="RmxhZyB0byBpbmRpY2F0ZSB3aGV0aGVyIGZvcm1hdCBpcyBjYWNoZWFibGUuICgxID0gY2FjaGVhYmxlLCAwID0gbm90IGNhY2hlYWJsZSk="/>
+      <column name="status" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ==" remarks="VGhlIHN0YXR1cyBvZiB0aGUgdGV4dCBmb3JtYXQuICgxID0gZW5hYmxlZCwgMCA9IGRpc2FibGVkKQ=="/>
+      <column name="weight" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="V2VpZ2h0IG9mIHRleHQgZm9ybWF0IHRvIHVzZSB3aGVuIGxpc3Rpbmcu"/>
+      <primary-key name="PRIMARY" columns="format"/>
+      <index name="name" unique="true" columns="name"/>
+      <index name="status_weight" unique="false" columns="status,weight"/>
+    </table>
+    <table name="flood" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="fid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VW5pcXVlIGZsb29kIGV2ZW50IElELg==" autoIncrement="true"/>
+      <column name="event" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="TmFtZSBvZiBldmVudCAoZS5nLiBjb250YWN0KS4="/>
+      <column name="identifier" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="SWRlbnRpZmllciBvZiB0aGUgdmlzaXRvciwgc3VjaCBhcyBhbiBJUCBhZGRyZXNzIG9yIGhvc3RuYW1lLg=="/>
+      <column name="timestamp" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGltZXN0YW1wIG9mIHRoZSBldmVudC4="/>
+      <column name="expiration" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="RXhwaXJhdGlvbiB0aW1lc3RhbXAuIEV4cGlyZWQgZXZlbnRzIGFyZSBwdXJnZWQgb24gY3JvbiBydW4u"/>
+      <primary-key name="PRIMARY" columns="fid"/>
+      <index name="allow" unique="false" columns="event,identifier,timestamp"/>
+      <index name="purge" unique="false" columns="expiration"/>
+    </table>
+    <table name="history" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="uid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHVzZXJzLnVpZCB0aGF0IHJlYWQgdGhlIG5vZGUgbmlkLg=="/>
+      <column name="nid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIG5vZGUubmlkIHRoYXQgd2FzIHJlYWQu"/>
+      <column name="timestamp" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIFVuaXggdGltZXN0YW1wIGF0IHdoaWNoIHRoZSByZWFkIG9jY3VycmVkLg=="/>
+      <primary-key name="PRIMARY" columns="uid,nid"/>
+      <index name="nid" unique="false" columns="nid"/>
+    </table>
+    <table name="image_effects" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="ieid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIHByaW1hcnkgaWRlbnRpZmllciBmb3IgYW4gaW1hZ2UgZWZmZWN0Lg==" autoIncrement="true"/>
+      <column name="isid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIGltYWdlX3N0eWxlcy5pc2lkIGZvciBhbiBpbWFnZSBzdHlsZS4="/>
+      <column name="weight" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHdlaWdodCBvZiB0aGUgZWZmZWN0IGluIHRoZSBzdHlsZS4="/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="VGhlIHVuaXF1ZSBuYW1lIG9mIHRoZSBlZmZlY3QgdG8gYmUgZXhlY3V0ZWQu"/>
+      <column name="data" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="false" jdbcType="-4" remarks="VGhlIGNvbmZpZ3VyYXRpb24gZGF0YSBmb3IgdGhlIGVmZmVjdC4="/>
+      <primary-key name="PRIMARY" columns="ieid"/>
+      <index name="isid" unique="false" columns="isid"/>
+      <index name="weight" unique="false" columns="weight"/>
+    </table>
+    <table name="image_styles" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="isid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIHByaW1hcnkgaWRlbnRpZmllciBmb3IgYW4gaW1hZ2Ugc3R5bGUu" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="VGhlIHN0eWxlIG1hY2hpbmUgbmFtZS4="/>
+      <column name="label" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIHN0eWxlIGFkbWluaXN0cmF0aXZlIG5hbWUu"/>
+      <primary-key name="PRIMARY" columns="isid"/>
+      <index name="name" unique="true" columns="name"/>
+    </table>
+    <table name="menu_custom" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="menu_name" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="UHJpbWFyeSBLZXk6IFVuaXF1ZSBrZXkgZm9yIG1lbnUuIFRoaXMgaXMgdXNlZCBhcyBhIGJsb2NrIGRlbHRhIHNvIGxlbmd0aCBpcyAzMi4="/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="TWVudSB0aXRsZTsgZGlzcGxheWVkIGF0IHRvcCBvZiBibG9jay4="/>
+      <column name="description" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" remarks="TWVudSBkZXNjcmlwdGlvbi4="/>
+      <primary-key name="PRIMARY" columns="menu_name"/>
+    </table>
+    <table name="menu_links" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="menu_name" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIG1lbnUgbmFtZS4gQWxsIGxpbmtzIHdpdGggdGhlIHNhbWUgbWVudSBuYW1lIChzdWNoIGFzIOKAmW5hdmlnYXRpb27igJkpIGFyZSBwYXJ0IG9mIHRoZSBzYW1lIG1lbnUu"/>
+      <column name="mlid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIG1lbnUgbGluayBJRCAobWxpZCkgaXMgdGhlIGludGVnZXIgcHJpbWFyeSBrZXku" autoIncrement="true"/>
+      <column name="plid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHBhcmVudCBsaW5rIElEIChwbGlkKSBpcyB0aGUgbWxpZCBvZiB0aGUgbGluayBhYm92ZSBpbiB0aGUgaGllcmFyY2h5LCBvciB6ZXJvIGlmIHRoZSBsaW5rIGlzIGF0IHRoZSB0b3AgbGV2ZWwgaW4gaXRzIG1lbnUu"/>
+      <column name="link_path" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIERydXBhbCBwYXRoIG9yIGV4dGVybmFsIHBhdGggdGhpcyBsaW5rIHBvaW50cyB0by4="/>
+      <column name="router_path" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="Rm9yIGxpbmtzIGNvcnJlc3BvbmRpbmcgdG8gYSBEcnVwYWwgcGF0aCAoZXh0ZXJuYWwgPSAwKSwgdGhpcyBjb25uZWN0cyB0aGUgbGluayB0byBhIG1lbnVfcm91dGVyLnBhdGggZm9yIGpvaW5zLg=="/>
+      <column name="link_title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIHRleHQgZGlzcGxheWVkIGZvciB0aGUgbGluaywgd2hpY2ggbWF5IGJlIG1vZGlmaWVkIGJ5IGEgdGl0bGUgY2FsbGJhY2sgc3RvcmVkIGluIG1lbnVfcm91dGVyLg=="/>
+      <column name="options" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4" remarks="QSBzZXJpYWxpemVkIGFycmF5IG9mIG9wdGlvbnMgdG8gYmUgcGFzc2VkIHRvIHRoZSB1cmwoKSBvciBsKCkgZnVuY3Rpb24sIHN1Y2ggYXMgYSBxdWVyeSBzdHJpbmcgb3IgSFRNTCBhdHRyaWJ1dGVzLg=="/>
+      <column name="module" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="J3N5c3RlbSc=" remarks="VGhlIG5hbWUgb2YgdGhlIG1vZHVsZSB0aGF0IGdlbmVyYXRlZCB0aGlzIGxpbmsu"/>
+      <column name="hidden" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MA==" remarks="QSBmbGFnIGZvciB3aGV0aGVyIHRoZSBsaW5rIHNob3VsZCBiZSByZW5kZXJlZCBpbiBtZW51cy4gKDEgPSBhIGRpc2FibGVkIG1lbnUgaXRlbSB0aGF0IG1heSBiZSBzaG93biBvbiBhZG1pbiBzY3JlZW5zLCAtMSA9IGEgbWVudSBjYWxsYmFjaywgMCA9IGEgbm9ybWFsLCB2aXNpYmxlIGxpbmsp"/>
+      <column name="external" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MA==" remarks="QSBmbGFnIHRvIGluZGljYXRlIGlmIHRoZSBsaW5rIHBvaW50cyB0byBhIGZ1bGwgVVJMIHN0YXJ0aW5nIHdpdGggYSBwcm90b2NvbCwgbGlrZSBodHRwOi8vICgxID0gZXh0ZXJuYWwsIDAgPSBpbnRlcm5hbCku"/>
+      <column name="has_children" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MA==" remarks="RmxhZyBpbmRpY2F0aW5nIHdoZXRoZXIgYW55IGxpbmtzIGhhdmUgdGhpcyBsaW5rIGFzIGEgcGFyZW50ICgxID0gY2hpbGRyZW4gZXhpc3QsIDAgPSBubyBjaGlsZHJlbiku"/>
+      <column name="expanded" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MA==" remarks="RmxhZyBmb3Igd2hldGhlciB0aGlzIGxpbmsgc2hvdWxkIGJlIHJlbmRlcmVkIGFzIGV4cGFuZGVkIGluIG1lbnVzIC0gZXhwYW5kZWQgbGlua3MgYWx3YXlzIGhhdmUgdGhlaXIgY2hpbGQgbGlua3MgZGlzcGxheWVkLCBpbnN0ZWFkIG9mIG9ubHkgd2hlbiB0aGUgbGluayBpcyBpbiB0aGUgYWN0aXZlIHRyYWlsICgxID0gZXhwYW5kZWQsIDAgPSBub3QgZXhwYW5kZWQp"/>
+      <column name="weight" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="TGluayB3ZWlnaHQgYW1vbmcgbGlua3MgaW4gdGhlIHNhbWUgbWVudSBhdCB0aGUgc2FtZSBkZXB0aC4="/>
+      <column name="depth" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MA==" remarks="VGhlIGRlcHRoIHJlbGF0aXZlIHRvIHRoZSB0b3AgbGV2ZWwuIEEgbGluayB3aXRoIHBsaWQgPT0gMCB3aWxsIGhhdmUgZGVwdGggPT0gMS4="/>
+      <column name="customized" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MA==" remarks="QSBmbGFnIHRvIGluZGljYXRlIHRoYXQgdGhlIHVzZXIgaGFzIG1hbnVhbGx5IGNyZWF0ZWQgb3IgZWRpdGVkIHRoZSBsaW5rICgxID0gY3VzdG9taXplZCwgMCA9IG5vdCBjdXN0b21pemVkKS4="/>
+      <column name="p1" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIGZpcnN0IG1saWQgaW4gdGhlIG1hdGVyaWFsaXplZCBwYXRoLiBJZiBOID0gZGVwdGgsIHRoZW4gcE4gbXVzdCBlcXVhbCB0aGUgbWxpZC4gSWYgZGVwdGggPiAxIHRoZW4gcChOLTEpIG11c3QgZXF1YWwgdGhlIHBsaWQuIEFsbCBwWCB3aGVyZSBYID4gZGVwdGggbXVzdCBlcXVhbCB6ZXJvLiBUaGUgY29sdW1ucyBwMSAuLiBwOSBhcmUgYWxzbyBjYWxsZWQgdGhlIHBhcmVudHMu"/>
+      <column name="p2" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHNlY29uZCBtbGlkIGluIHRoZSBtYXRlcmlhbGl6ZWQgcGF0aC4gU2VlIHAxLg=="/>
+      <column name="p3" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHRoaXJkIG1saWQgaW4gdGhlIG1hdGVyaWFsaXplZCBwYXRoLiBTZWUgcDEu"/>
+      <column name="p4" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIGZvdXJ0aCBtbGlkIGluIHRoZSBtYXRlcmlhbGl6ZWQgcGF0aC4gU2VlIHAxLg=="/>
+      <column name="p5" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIGZpZnRoIG1saWQgaW4gdGhlIG1hdGVyaWFsaXplZCBwYXRoLiBTZWUgcDEu"/>
+      <column name="p6" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHNpeHRoIG1saWQgaW4gdGhlIG1hdGVyaWFsaXplZCBwYXRoLiBTZWUgcDEu"/>
+      <column name="p7" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHNldmVudGggbWxpZCBpbiB0aGUgbWF0ZXJpYWxpemVkIHBhdGguIFNlZSBwMS4="/>
+      <column name="p8" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIGVpZ2h0aCBtbGlkIGluIHRoZSBtYXRlcmlhbGl6ZWQgcGF0aC4gU2VlIHAxLg=="/>
+      <column name="p9" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIG5pbnRoIG1saWQgaW4gdGhlIG1hdGVyaWFsaXplZCBwYXRoLiBTZWUgcDEu"/>
+      <column name="updated" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MA==" remarks="RmxhZyB0aGF0IGluZGljYXRlcyB0aGF0IHRoaXMgbGluayB3YXMgZ2VuZXJhdGVkIGR1cmluZyB0aGUgdXBkYXRlIGZyb20gRHJ1cGFsIDUu"/>
+      <primary-key name="PRIMARY" columns="mlid"/>
+      <index name="menu_parents" unique="false" columns="menu_name,p1,p2,p3,p4,p5,p6,p7,p8,p9"/>
+      <index name="menu_plid_expand_child" unique="false" columns="menu_name,plid,expanded,has_children"/>
+      <index name="path_menu" unique="false" columns="link_path,menu_name"/>
+      <index name="router_path" unique="false" columns="router_path"/>
+    </table>
+    <table name="menu_router" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="path" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="UHJpbWFyeSBLZXk6IHRoZSBEcnVwYWwgcGF0aCB0aGlzIGVudHJ5IGRlc2NyaWJlcw=="/>
+      <column name="load_functions" sqlType="BLOB" precision="65535" scale="0" nullable="false" jdbcType="-4" remarks="QSBzZXJpYWxpemVkIGFycmF5IG9mIGZ1bmN0aW9uIG5hbWVzIChsaWtlIG5vZGVfbG9hZCkgdG8gYmUgY2FsbGVkIHRvIGxvYWQgYW4gb2JqZWN0IGNvcnJlc3BvbmRpbmcgdG8gYSBwYXJ0IG9mIHRoZSBjdXJyZW50IHBhdGgu"/>
+      <column name="to_arg_functions" sqlType="BLOB" precision="65535" scale="0" nullable="false" jdbcType="-4" remarks="QSBzZXJpYWxpemVkIGFycmF5IG9mIGZ1bmN0aW9uIG5hbWVzIChsaWtlIHVzZXJfdWlkX29wdGlvbmFsX3RvX2FyZykgdG8gYmUgY2FsbGVkIHRvIHJlcGxhY2UgYSBwYXJ0IG9mIHRoZSByb3V0ZXIgcGF0aCB3aXRoIGFub3RoZXIgc3RyaW5nLg=="/>
+      <column name="access_callback" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGNhbGxiYWNrIHdoaWNoIGRldGVybWluZXMgdGhlIGFjY2VzcyB0byB0aGlzIHJvdXRlciBwYXRoLiBEZWZhdWx0cyB0byB1c2VyX2FjY2Vzcy4="/>
+      <column name="access_arguments" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4" remarks="QSBzZXJpYWxpemVkIGFycmF5IG9mIGFyZ3VtZW50cyBmb3IgdGhlIGFjY2VzcyBjYWxsYmFjay4="/>
+      <column name="page_callback" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIG5hbWUgb2YgdGhlIGZ1bmN0aW9uIHRoYXQgcmVuZGVycyB0aGUgcGFnZS4="/>
+      <column name="page_arguments" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4" remarks="QSBzZXJpYWxpemVkIGFycmF5IG9mIGFyZ3VtZW50cyBmb3IgdGhlIHBhZ2UgY2FsbGJhY2su"/>
+      <column name="delivery_callback" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIG5hbWUgb2YgdGhlIGZ1bmN0aW9uIHRoYXQgc2VuZHMgdGhlIHJlc3VsdCBvZiB0aGUgcGFnZV9jYWxsYmFjayBmdW5jdGlvbiB0byB0aGUgYnJvd3Nlci4="/>
+      <column name="fit" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="QSBudW1lcmljIHJlcHJlc2VudGF0aW9uIG9mIGhvdyBzcGVjaWZpYyB0aGUgcGF0aCBpcy4="/>
+      <column name="number_parts" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MA==" remarks="TnVtYmVyIG9mIHBhcnRzIGluIHRoaXMgcm91dGVyIHBhdGgu"/>
+      <column name="context" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="T25seSBmb3IgbG9jYWwgdGFza3MgKHRhYnMpIC0gdGhlIGNvbnRleHQgb2YgYSBsb2NhbCB0YXNrIHRvIGNvbnRyb2wgaXRzIHBsYWNlbWVudC4="/>
+      <column name="tab_parent" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="T25seSBmb3IgbG9jYWwgdGFza3MgKHRhYnMpIC0gdGhlIHJvdXRlciBwYXRoIG9mIHRoZSBwYXJlbnQgcGFnZSAod2hpY2ggbWF5IGFsc28gYmUgYSBsb2NhbCB0YXNrKS4="/>
+      <column name="tab_root" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="Um91dGVyIHBhdGggb2YgdGhlIGNsb3Nlc3Qgbm9uLXRhYiBwYXJlbnQgcGFnZS4gRm9yIHBhZ2VzIHRoYXQgYXJlIG5vdCBsb2NhbCB0YXNrcywgdGhpcyB3aWxsIGJlIHRoZSBzYW1lIGFzIHRoZSBwYXRoLg=="/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIHRpdGxlIGZvciB0aGUgY3VycmVudCBwYWdlLCBvciB0aGUgdGl0bGUgZm9yIHRoZSB0YWIgaWYgdGhpcyBpcyBhIGxvY2FsIHRhc2su"/>
+      <column name="title_callback" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="QSBmdW5jdGlvbiB3aGljaCB3aWxsIGFsdGVyIHRoZSB0aXRsZS4gRGVmYXVsdHMgdG8gdCgp"/>
+      <column name="title_arguments" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="QSBzZXJpYWxpemVkIGFycmF5IG9mIGFyZ3VtZW50cyBmb3IgdGhlIHRpdGxlIGNhbGxiYWNrLiBJZiBlbXB0eSwgdGhlIHRpdGxlIHdpbGwgYmUgdXNlZCBhcyB0aGUgc29sZSBhcmd1bWVudCBmb3IgdGhlIHRpdGxlIGNhbGxiYWNrLg=="/>
+      <column name="theme_callback" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="QSBmdW5jdGlvbiB3aGljaCByZXR1cm5zIHRoZSBuYW1lIG9mIHRoZSB0aGVtZSB0aGF0IHdpbGwgYmUgdXNlZCB0byByZW5kZXIgdGhpcyBwYWdlLiBJZiBsZWZ0IGVtcHR5LCB0aGUgZGVmYXVsdCB0aGVtZSB3aWxsIGJlIHVzZWQu"/>
+      <column name="theme_arguments" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="QSBzZXJpYWxpemVkIGFycmF5IG9mIGFyZ3VtZW50cyBmb3IgdGhlIHRoZW1lIGNhbGxiYWNrLg=="/>
+      <column name="type" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="TnVtZXJpYyByZXByZXNlbnRhdGlvbiBvZiB0aGUgdHlwZSBvZiB0aGUgbWVudSBpdGVtLCBsaWtlIE1FTlVfTE9DQUxfVEFTSy4="/>
+      <column name="description" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1" remarks="QSBkZXNjcmlwdGlvbiBvZiB0aGlzIGl0ZW0u"/>
+      <column name="position" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIHBvc2l0aW9uIG9mIHRoZSBibG9jayAobGVmdCBvciByaWdodCkgb24gdGhlIHN5c3RlbSBhZG1pbmlzdHJhdGlvbiBwYWdlIGZvciB0aGlzIGl0ZW0u"/>
+      <column name="weight" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="V2VpZ2h0IG9mIHRoZSBlbGVtZW50LiBMaWdodGVyIHdlaWdodHMgYXJlIGhpZ2hlciB1cCwgaGVhdmllciB3ZWlnaHRzIGdvIGRvd24u"/>
+      <column name="include_file" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="true" jdbcType="-1" remarks="VGhlIGZpbGUgdG8gaW5jbHVkZSBmb3IgdGhpcyBlbGVtZW50LCB1c3VhbGx5IHRoZSBwYWdlIGNhbGxiYWNrIGZ1bmN0aW9uIGxpdmVzIGluIHRoaXMgZmlsZS4="/>
+      <primary-key name="PRIMARY" columns="path"/>
+      <index name="fit" unique="false" columns="fit"/>
+      <index name="tab_parent" unique="false" columns="tab_parent,weight,title"/>
+      <index name="tab_root_weight_title" unique="false" columns="tab_root,weight,title"/>
+    </table>
+    <table name="node" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="nid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIHByaW1hcnkgaWRlbnRpZmllciBmb3IgYSBub2RlLg==" autoIncrement="true"/>
+      <column name="vid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4" remarks="VGhlIGN1cnJlbnQgbm9kZV9yZXZpc2lvbi52aWQgdmVyc2lvbiBpZGVudGlmaWVyLg=="/>
+      <column name="type" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIG5vZGVfdHlwZS50eXBlIG9mIHRoaXMgbm9kZS4="/>
+      <column name="language" sqlType="VARCHAR" precision="12" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGxhbmd1YWdlcy5sYW5ndWFnZSBvZiB0aGlzIG5vZGUu"/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIHRpdGxlIG9mIHRoaXMgbm9kZSwgYWx3YXlzIHRyZWF0ZWQgYXMgbm9uLW1hcmt1cCBwbGFpbiB0ZXh0Lg=="/>
+      <column name="uid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHVzZXJzLnVpZCB0aGF0IG93bnMgdGhpcyBub2RlOyBpbml0aWFsbHksIHRoaXMgaXMgdGhlIHVzZXIgdGhhdCBjcmVhdGVkIGl0Lg=="/>
+      <column name="status" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MQ==" remarks="Qm9vbGVhbiBpbmRpY2F0aW5nIHdoZXRoZXIgdGhlIG5vZGUgaXMgcHVibGlzaGVkICh2aXNpYmxlIHRvIG5vbi1hZG1pbmlzdHJhdG9ycyku"/>
+      <column name="created" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIFVuaXggdGltZXN0YW1wIHdoZW4gdGhlIG5vZGUgd2FzIGNyZWF0ZWQu"/>
+      <column name="changed" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIFVuaXggdGltZXN0YW1wIHdoZW4gdGhlIG5vZGUgd2FzIG1vc3QgcmVjZW50bHkgc2F2ZWQu"/>
+      <column name="comment" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="V2hldGhlciBjb21tZW50cyBhcmUgYWxsb3dlZCBvbiB0aGlzIG5vZGU6IDAgPSBubywgMSA9IGNsb3NlZCAocmVhZCBvbmx5KSwgMiA9IG9wZW4gKHJlYWQvd3JpdGUpLg=="/>
+      <column name="promote" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="Qm9vbGVhbiBpbmRpY2F0aW5nIHdoZXRoZXIgdGhlIG5vZGUgc2hvdWxkIGJlIGRpc3BsYXllZCBvbiB0aGUgZnJvbnQgcGFnZS4="/>
+      <column name="sticky" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="Qm9vbGVhbiBpbmRpY2F0aW5nIHdoZXRoZXIgdGhlIG5vZGUgc2hvdWxkIGJlIGRpc3BsYXllZCBhdCB0aGUgdG9wIG9mIGxpc3RzIGluIHdoaWNoIGl0IGFwcGVhcnMu"/>
+      <column name="tnid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHRyYW5zbGF0aW9uIHNldCBpZCBmb3IgdGhpcyBub2RlLCB3aGljaCBlcXVhbHMgdGhlIG5vZGUgaWQgb2YgdGhlIHNvdXJjZSBwb3N0IGluIGVhY2ggc2V0Lg=="/>
+      <column name="translate" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="QSBib29sZWFuIGluZGljYXRpbmcgd2hldGhlciB0aGlzIHRyYW5zbGF0aW9uIHBhZ2UgbmVlZHMgdG8gYmUgdXBkYXRlZC4="/>
+      <primary-key name="PRIMARY" columns="nid"/>
+      <index name="vid" unique="true" columns="vid"/>
+      <index name="language" unique="false" columns="language"/>
+      <index name="node_changed" unique="false" columns="changed"/>
+      <index name="node_created" unique="false" columns="created"/>
+      <index name="node_frontpage" unique="false" columns="promote,status,sticky,created"/>
+      <index name="node_status_type" unique="false" columns="status,type,nid"/>
+      <index name="node_title_type" unique="false" columns="title,type"/>
+      <index name="node_type" unique="false" columns="type"/>
+      <index name="tnid" unique="false" columns="tnid"/>
+      <index name="translate" unique="false" columns="translate"/>
+      <index name="uid" unique="false" columns="uid"/>
+    </table>
+    <table name="node_access" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="nid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIG5vZGUubmlkIHRoaXMgcmVjb3JkIGFmZmVjdHMu"/>
+      <column name="gid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIGdyYW50IElEIGEgdXNlciBtdXN0IHBvc3Nlc3MgaW4gdGhlIHNwZWNpZmllZCByZWFsbSB0byBnYWluIHRoaXMgcm934oCZcyBwcml2aWxlZ2VzIG9uIHRoZSBub2RlLg=="/>
+      <column name="realm" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIHJlYWxtIGluIHdoaWNoIHRoZSB1c2VyIG11c3QgcG9zc2VzcyB0aGUgZ3JhbnQgSUQuIEVhY2ggbm9kZSBhY2Nlc3Mgbm9kZSBjYW4gZGVmaW5lIG9uZSBvciBtb3JlIHJlYWxtcy4="/>
+      <column name="grant_view" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="Qm9vbGVhbiBpbmRpY2F0aW5nIHdoZXRoZXIgYSB1c2VyIHdpdGggdGhlIHJlYWxtL2dyYW50IHBhaXIgY2FuIHZpZXcgdGhpcyBub2RlLg=="/>
+      <column name="grant_update" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="Qm9vbGVhbiBpbmRpY2F0aW5nIHdoZXRoZXIgYSB1c2VyIHdpdGggdGhlIHJlYWxtL2dyYW50IHBhaXIgY2FuIGVkaXQgdGhpcyBub2RlLg=="/>
+      <column name="grant_delete" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="Qm9vbGVhbiBpbmRpY2F0aW5nIHdoZXRoZXIgYSB1c2VyIHdpdGggdGhlIHJlYWxtL2dyYW50IHBhaXIgY2FuIGRlbGV0ZSB0aGlzIG5vZGUu"/>
+      <primary-key name="PRIMARY" columns="nid,gid,realm"/>
+    </table>
+    <table name="node_comment_statistics" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="nid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIG5vZGUubmlkIGZvciB3aGljaCB0aGUgc3RhdGlzdGljcyBhcmUgY29tcGlsZWQu"/>
+      <column name="cid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIGNvbW1lbnQuY2lkIG9mIHRoZSBsYXN0IGNvbW1lbnQu"/>
+      <column name="last_comment_timestamp" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIFVuaXggdGltZXN0YW1wIG9mIHRoZSBsYXN0IGNvbW1lbnQgdGhhdCB3YXMgcG9zdGVkIHdpdGhpbiB0aGlzIG5vZGUsIGZyb20gY29tbWVudC5jaGFuZ2VkLg=="/>
+      <column name="last_comment_name" sqlType="VARCHAR" precision="60" scale="0" nullable="true" jdbcType="12" remarks="VGhlIG5hbWUgb2YgdGhlIGxhdGVzdCBhdXRob3IgdG8gcG9zdCBhIGNvbW1lbnQgb24gdGhpcyBub2RlLCBmcm9tIGNvbW1lbnQubmFtZS4="/>
+      <column name="last_comment_uid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHVzZXIgSUQgb2YgdGhlIGxhdGVzdCBhdXRob3IgdG8gcG9zdCBhIGNvbW1lbnQgb24gdGhpcyBub2RlLCBmcm9tIGNvbW1lbnQudWlkLg=="/>
+      <column name="comment_count" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHRvdGFsIG51bWJlciBvZiBjb21tZW50cyBvbiB0aGlzIG5vZGUu"/>
+      <primary-key name="PRIMARY" columns="nid"/>
+      <index name="comment_count" unique="false" columns="comment_count"/>
+      <index name="last_comment_uid" unique="false" columns="last_comment_uid"/>
+      <index name="node_comment_timestamp" unique="false" columns="last_comment_timestamp"/>
+    </table>
+    <table name="node_revision" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="nid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIG5vZGUgdGhpcyB2ZXJzaW9uIGJlbG9uZ3MgdG8u"/>
+      <column name="vid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIHByaW1hcnkgaWRlbnRpZmllciBmb3IgdGhpcyB2ZXJzaW9uLg==" autoIncrement="true"/>
+      <column name="uid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHVzZXJzLnVpZCB0aGF0IGNyZWF0ZWQgdGhpcyB2ZXJzaW9uLg=="/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIHRpdGxlIG9mIHRoaXMgdmVyc2lvbi4="/>
+      <column name="log" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="false" jdbcType="-1" remarks="VGhlIGxvZyBlbnRyeSBleHBsYWluaW5nIHRoZSBjaGFuZ2VzIGluIHRoaXMgdmVyc2lvbi4="/>
+      <column name="timestamp" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="QSBVbml4IHRpbWVzdGFtcCBpbmRpY2F0aW5nIHdoZW4gdGhpcyB2ZXJzaW9uIHdhcyBjcmVhdGVkLg=="/>
+      <column name="status" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MQ==" remarks="Qm9vbGVhbiBpbmRpY2F0aW5nIHdoZXRoZXIgdGhlIG5vZGUgKGF0IHRoZSB0aW1lIG9mIHRoaXMgcmV2aXNpb24pIGlzIHB1Ymxpc2hlZCAodmlzaWJsZSB0byBub24tYWRtaW5pc3RyYXRvcnMpLg=="/>
+      <column name="comment" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="V2hldGhlciBjb21tZW50cyBhcmUgYWxsb3dlZCBvbiB0aGlzIG5vZGUgKGF0IHRoZSB0aW1lIG9mIHRoaXMgcmV2aXNpb24pOiAwID0gbm8sIDEgPSBjbG9zZWQgKHJlYWQgb25seSksIDIgPSBvcGVuIChyZWFkL3dyaXRlKS4="/>
+      <column name="promote" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="Qm9vbGVhbiBpbmRpY2F0aW5nIHdoZXRoZXIgdGhlIG5vZGUgKGF0IHRoZSB0aW1lIG9mIHRoaXMgcmV2aXNpb24pIHNob3VsZCBiZSBkaXNwbGF5ZWQgb24gdGhlIGZyb250IHBhZ2Uu"/>
+      <column name="sticky" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="Qm9vbGVhbiBpbmRpY2F0aW5nIHdoZXRoZXIgdGhlIG5vZGUgKGF0IHRoZSB0aW1lIG9mIHRoaXMgcmV2aXNpb24pIHNob3VsZCBiZSBkaXNwbGF5ZWQgYXQgdGhlIHRvcCBvZiBsaXN0cyBpbiB3aGljaCBpdCBhcHBlYXJzLg=="/>
+      <primary-key name="PRIMARY" columns="vid"/>
+      <index name="nid" unique="false" columns="nid"/>
+      <index name="uid" unique="false" columns="uid"/>
+    </table>
+    <table name="node_type" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="type" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" remarks="VGhlIG1hY2hpbmUtcmVhZGFibGUgbmFtZSBvZiB0aGlzIHR5cGUu"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGh1bWFuLXJlYWRhYmxlIG5hbWUgb2YgdGhpcyB0eXBlLg=="/>
+      <column name="base" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="VGhlIGJhc2Ugc3RyaW5nIHVzZWQgdG8gY29uc3RydWN0IGNhbGxiYWNrcyBjb3JyZXNwb25kaW5nIHRvIHRoaXMgbm9kZSB0eXBlLg=="/>
+      <column name="module" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="VGhlIG1vZHVsZSBkZWZpbmluZyB0aGlzIG5vZGUgdHlwZS4="/>
+      <column name="description" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="false" jdbcType="-1" remarks="QSBicmllZiBkZXNjcmlwdGlvbiBvZiB0aGlzIHR5cGUu"/>
+      <column name="help" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="false" jdbcType="-1" remarks="SGVscCBpbmZvcm1hdGlvbiBzaG93biB0byB0aGUgdXNlciB3aGVuIGNyZWF0aW5nIGEgbm9kZSBvZiB0aGlzIHR5cGUu"/>
+      <column name="has_title" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" remarks="Qm9vbGVhbiBpbmRpY2F0aW5nIHdoZXRoZXIgdGhpcyB0eXBlIHVzZXMgdGhlIG5vZGUudGl0bGUgZmllbGQu"/>
+      <column name="title_label" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGxhYmVsIGRpc3BsYXllZCBmb3IgdGhlIHRpdGxlIGZpZWxkIG9uIHRoZSBlZGl0IGZvcm0u"/>
+      <column name="custom" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="QSBib29sZWFuIGluZGljYXRpbmcgd2hldGhlciB0aGlzIHR5cGUgaXMgZGVmaW5lZCBieSBhIG1vZHVsZSAoRkFMU0UpIG9yIGJ5IGEgdXNlciB2aWEgQWRkIGNvbnRlbnQgdHlwZSAoVFJVRSku"/>
+      <column name="modified" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="QSBib29sZWFuIGluZGljYXRpbmcgd2hldGhlciB0aGlzIHR5cGUgaGFzIGJlZW4gbW9kaWZpZWQgYnkgYW4gYWRtaW5pc3RyYXRvcjsgY3VycmVudGx5IG5vdCB1c2VkIGluIGFueSB3YXku"/>
+      <column name="locked" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="QSBib29sZWFuIGluZGljYXRpbmcgd2hldGhlciB0aGUgYWRtaW5pc3RyYXRvciBjYW4gY2hhbmdlIHRoZSBtYWNoaW5lIG5hbWUgb2YgdGhpcyB0eXBlLg=="/>
+      <column name="disabled" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="QSBib29sZWFuIGluZGljYXRpbmcgd2hldGhlciB0aGUgbm9kZSB0eXBlIGlzIGRpc2FibGVkLg=="/>
+      <column name="orig_type" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIG9yaWdpbmFsIG1hY2hpbmUtcmVhZGFibGUgbmFtZSBvZiB0aGlzIG5vZGUgdHlwZS4gVGhpcyBtYXkgYmUgZGlmZmVyZW50IGZyb20gdGhlIGN1cnJlbnQgdHlwZSBuYW1lIGlmIHRoZSBsb2NrZWQgZmllbGQgaXMgMC4="/>
+      <primary-key name="PRIMARY" columns="type"/>
+    </table>
+    <table name="queue" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="item_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="UHJpbWFyeSBLZXk6IFVuaXF1ZSBpdGVtIElELg==" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIHF1ZXVlIG5hbWUu"/>
+      <column name="data" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="true" jdbcType="-4" remarks="VGhlIGFyYml0cmFyeSBkYXRhIGZvciB0aGUgaXRlbS4="/>
+      <column name="expire" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGltZXN0YW1wIHdoZW4gdGhlIGNsYWltIGxlYXNlIGV4cGlyZXMgb24gdGhlIGl0ZW0u"/>
+      <column name="created" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGltZXN0YW1wIHdoZW4gdGhlIGl0ZW0gd2FzIGNyZWF0ZWQu"/>
+      <primary-key name="PRIMARY" columns="item_id"/>
+      <index name="expire" unique="false" columns="expire"/>
+      <index name="name_created" unique="false" columns="name,created"/>
+    </table>
+    <table name="rdf_mapping" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="type" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" remarks="VGhlIG5hbWUgb2YgdGhlIGVudGl0eSB0eXBlIGEgbWFwcGluZyBhcHBsaWVzIHRvIChub2RlLCB1c2VyLCBjb21tZW50LCBldGMuKS4="/>
+      <column name="bundle" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" remarks="VGhlIG5hbWUgb2YgdGhlIGJ1bmRsZSBhIG1hcHBpbmcgYXBwbGllcyB0by4="/>
+      <column name="mapping" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="true" jdbcType="-4" remarks="VGhlIHNlcmlhbGl6ZWQgbWFwcGluZyBvZiB0aGUgYnVuZGxlIHR5cGUgYW5kIGZpZWxkcyB0byBSREYgdGVybXMu"/>
+      <primary-key name="PRIMARY" columns="type,bundle"/>
+    </table>
+    <table name="registry" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIG5hbWUgb2YgdGhlIGZ1bmN0aW9uLCBjbGFzcywgb3IgaW50ZXJmYWNlLg=="/>
+      <column name="type" sqlType="VARCHAR" precision="9" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="RWl0aGVyIGZ1bmN0aW9uIG9yIGNsYXNzIG9yIGludGVyZmFjZS4="/>
+      <column name="filename" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="TmFtZSBvZiB0aGUgZmlsZS4="/>
+      <column name="module" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="TmFtZSBvZiB0aGUgbW9kdWxlIHRoZSBmaWxlIGJlbG9uZ3MgdG8u"/>
+      <column name="weight" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIG9yZGVyIGluIHdoaWNoIHRoaXMgbW9kdWxl4oCZcyBob29rcyBzaG91bGQgYmUgaW52b2tlZCByZWxhdGl2ZSB0byBvdGhlciBtb2R1bGVzLiBFcXVhbC13ZWlnaHRlZCBtb2R1bGVzIGFyZSBvcmRlcmVkIGJ5IG5hbWUu"/>
+      <primary-key name="PRIMARY" columns="name,type"/>
+      <index name="hook" unique="false" columns="type,weight,module"/>
+    </table>
+    <table name="registry_file" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="filename" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="UGF0aCB0byB0aGUgZmlsZS4="/>
+      <column name="hash" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" remarks="c2hhLTI1NiBoYXNoIG9mIHRoZSBmaWxl4oCZcyBjb250ZW50cyB3aGVuIGxhc3QgcGFyc2VkLg=="/>
+      <primary-key name="PRIMARY" columns="filename"/>
+    </table>
+    <table name="role" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="rid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="UHJpbWFyeSBLZXk6IFVuaXF1ZSByb2xlIElELg==" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VW5pcXVlIHJvbGUgbmFtZS4="/>
+      <column name="weight" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHdlaWdodCBvZiB0aGlzIHJvbGUgaW4gbGlzdGluZ3MgYW5kIHRoZSB1c2VyIGludGVyZmFjZS4="/>
+      <primary-key name="PRIMARY" columns="rid"/>
+      <index name="name" unique="true" columns="name"/>
+      <index name="name_weight" unique="false" columns="name,weight"/>
+    </table>
+    <table name="role_permission" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="rid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="Rm9yZWlnbiBLZXk6IHJvbGUucmlkLg=="/>
+      <column name="permission" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="QSBzaW5nbGUgcGVybWlzc2lvbiBncmFudGVkIHRvIHRoZSByb2xlIGlkZW50aWZpZWQgYnkgcmlkLg=="/>
+      <column name="module" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIG1vZHVsZSBkZWNsYXJpbmcgdGhlIHBlcm1pc3Npb24u"/>
+      <primary-key name="PRIMARY" columns="rid,permission"/>
+      <index name="permission" unique="false" columns="permission"/>
+    </table>
+    <table name="search_dataset" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="sid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="U2VhcmNoIGl0ZW0gSUQsIGUuZy4gbm9kZSBJRCBmb3Igbm9kZXMu"/>
+      <column name="type" sqlType="VARCHAR" precision="16" scale="0" nullable="false" jdbcType="12" remarks="VHlwZSBvZiBpdGVtLCBlLmcuIG5vZGUu"/>
+      <column name="data" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="false" jdbcType="-1" remarks="TGlzdCBvZiBzcGFjZS1zZXBhcmF0ZWQgd29yZHMgZnJvbSB0aGUgaXRlbS4="/>
+      <column name="reindex" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="U2V0IHRvIGZvcmNlIG5vZGUgcmVpbmRleGluZy4="/>
+      <primary-key name="PRIMARY" columns="sid,type"/>
+    </table>
+    <table name="search_index" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="word" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIHNlYXJjaF90b3RhbC53b3JkIHRoYXQgaXMgYXNzb2NpYXRlZCB3aXRoIHRoZSBzZWFyY2ggaXRlbS4="/>
+      <column name="sid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHNlYXJjaF9kYXRhc2V0LnNpZCBvZiB0aGUgc2VhcmNoYWJsZSBpdGVtIHRvIHdoaWNoIHRoZSB3b3JkIGJlbG9uZ3Mu"/>
+      <column name="type" sqlType="VARCHAR" precision="16" scale="0" nullable="false" jdbcType="12" remarks="VGhlIHNlYXJjaF9kYXRhc2V0LnR5cGUgb2YgdGhlIHNlYXJjaGFibGUgaXRlbSB0byB3aGljaCB0aGUgd29yZCBiZWxvbmdzLg=="/>
+      <column name="score" sqlType="FLOAT" precision="12" scale="0" nullable="true" jdbcType="7" remarks="VGhlIG51bWVyaWMgc2NvcmUgb2YgdGhlIHdvcmQsIGhpZ2hlciBiZWluZyBtb3JlIGltcG9ydGFudC4="/>
+      <primary-key name="PRIMARY" columns="word,sid,type"/>
+      <index name="sid_type" unique="false" columns="sid,type"/>
+    </table>
+    <table name="search_node_links" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="sid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHNlYXJjaF9kYXRhc2V0LnNpZCBvZiB0aGUgc2VhcmNoYWJsZSBpdGVtIGNvbnRhaW5pbmcgdGhlIGxpbmsgdG8gdGhlIG5vZGUu"/>
+      <column name="type" sqlType="VARCHAR" precision="16" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIHNlYXJjaF9kYXRhc2V0LnR5cGUgb2YgdGhlIHNlYXJjaGFibGUgaXRlbSBjb250YWluaW5nIHRoZSBsaW5rIHRvIHRoZSBub2RlLg=="/>
+      <column name="nid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIG5vZGUubmlkIHRoYXQgdGhpcyBpdGVtIGxpbmtzIHRvLg=="/>
+      <column name="caption" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1" remarks="VGhlIHRleHQgdXNlZCB0byBsaW5rIHRvIHRoZSBub2RlLm5pZC4="/>
+      <primary-key name="PRIMARY" columns="sid,type,nid"/>
+      <index name="nid" unique="false" columns="nid"/>
+    </table>
+    <table name="search_total" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="word" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="UHJpbWFyeSBLZXk6IFVuaXF1ZSB3b3JkIGluIHRoZSBzZWFyY2ggaW5kZXgu"/>
+      <column name="count" sqlType="FLOAT" precision="12" scale="0" nullable="true" jdbcType="7" remarks="VGhlIGNvdW50IG9mIHRoZSB3b3JkIGluIHRoZSBpbmRleCB1c2luZyBaaXBm4oCZcyBsYXcgdG8gZXF1YWxpemUgdGhlIHByb2JhYmlsaXR5IGRpc3RyaWJ1dGlvbi4="/>
+      <primary-key name="PRIMARY" columns="word"/>
+    </table>
+    <table name="semaphore" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="UHJpbWFyeSBLZXk6IFVuaXF1ZSBuYW1lLg=="/>
+      <column name="value" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="QSB2YWx1ZSBmb3IgdGhlIHNlbWFwaG9yZS4="/>
+      <column name="expire" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8" remarks="QSBVbml4IHRpbWVzdGFtcCB3aXRoIG1pY3Jvc2Vjb25kcyBpbmRpY2F0aW5nIHdoZW4gdGhlIHNlbWFwaG9yZSBzaG91bGQgZXhwaXJlLg=="/>
+      <primary-key name="PRIMARY" columns="name"/>
+      <index name="expire" unique="false" columns="expire"/>
+      <index name="value" unique="false" columns="value"/>
+    </table>
+    <table name="sequences" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="value" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIHZhbHVlIG9mIHRoZSBzZXF1ZW5jZS4=" autoIncrement="true"/>
+      <primary-key name="PRIMARY" columns="value"/>
+    </table>
+    <table name="sessions" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="uid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="VGhlIHVzZXJzLnVpZCBjb3JyZXNwb25kaW5nIHRvIGEgc2Vzc2lvbiwgb3IgMCBmb3IgYW5vbnltb3VzIHVzZXIu"/>
+      <column name="sid" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" remarks="QSBzZXNzaW9uIElELiBUaGUgdmFsdWUgaXMgZ2VuZXJhdGVkIGJ5IERydXBhbOKAmXMgc2Vzc2lvbiBoYW5kbGVycy4="/>
+      <column name="ssid" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="U2VjdXJlIHNlc3Npb24gSUQuIFRoZSB2YWx1ZSBpcyBnZW5lcmF0ZWQgYnkgRHJ1cGFs4oCZcyBzZXNzaW9uIGhhbmRsZXJzLg=="/>
+      <column name="hostname" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIElQIGFkZHJlc3MgdGhhdCBsYXN0IHVzZWQgdGhpcyBzZXNzaW9uIElEIChzaWQpLg=="/>
+      <column name="timestamp" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIFVuaXggdGltZXN0YW1wIHdoZW4gdGhpcyBzZXNzaW9uIGxhc3QgcmVxdWVzdGVkIGEgcGFnZS4gT2xkIHJlY29yZHMgYXJlIHB1cmdlZCBieSBQSFAgYXV0b21hdGljYWxseS4="/>
+      <column name="cache" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHRpbWUgb2YgdGhpcyB1c2Vy4oCZcyBsYXN0IHBvc3QuIFRoaXMgaXMgdXNlZCB3aGVuIHRoZSBzaXRlIGhhcyBzcGVjaWZpZWQgYSBtaW5pbXVtX2NhY2hlX2xpZmV0aW1lLiBTZWUgY2FjaGVfZ2V0KCku"/>
+      <column name="session" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="true" jdbcType="-4" remarks="VGhlIHNlcmlhbGl6ZWQgY29udGVudHMgb2YgJF9TRVNTSU9OLCBhbiBhcnJheSBvZiBuYW1lL3ZhbHVlIHBhaXJzIHRoYXQgcGVyc2lzdHMgYWNyb3NzIHBhZ2UgcmVxdWVzdHMgYnkgdGhpcyBzZXNzaW9uIElELiBEcnVwYWwgbG9hZHMgJF9TRVNTSU9OIGZyb20gaGVyZSBhdCB0aGUgc3RhcnQgb2YgZWFjaCByZXF1ZXN0IGFuZCBzYXZlcyBpdCBhdCB0aGUgZW5kLg=="/>
+      <primary-key name="PRIMARY" columns="sid,ssid"/>
+      <index name="ssid" unique="false" columns="ssid"/>
+      <index name="timestamp" unique="false" columns="timestamp"/>
+      <index name="uid" unique="false" columns="uid"/>
+    </table>
+    <table name="shortcut_set" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="set_name" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="UHJpbWFyeSBLZXk6IFRoZSBtZW51X2xpbmtzLm1lbnVfbmFtZSB1bmRlciB3aGljaCB0aGUgc2V04oCZcyBsaW5rcyBhcmUgc3RvcmVkLg=="/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIHRpdGxlIG9mIHRoZSBzZXQu"/>
+      <primary-key name="PRIMARY" columns="set_name"/>
+    </table>
+    <table name="shortcut_set_users" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="uid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHVzZXJzLnVpZCBmb3IgdGhpcyBzZXQu"/>
+      <column name="set_name" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIHNob3J0Y3V0X3NldC5zZXRfbmFtZSB0aGF0IHdpbGwgYmUgZGlzcGxheWVkIGZvciB0aGlzIHVzZXIu"/>
+      <primary-key name="PRIMARY" columns="uid"/>
+      <index name="set_name" unique="false" columns="set_name"/>
+    </table>
+    <table name="system" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="filename" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIHBhdGggb2YgdGhlIHByaW1hcnkgZmlsZSBmb3IgdGhpcyBpdGVtLCByZWxhdGl2ZSB0byB0aGUgRHJ1cGFsIHJvb3Q7IGUuZy4gbW9kdWxlcy9ub2RlL25vZGUubW9kdWxlLg=="/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIG5hbWUgb2YgdGhlIGl0ZW07IGUuZy4gbm9kZS4="/>
+      <column name="type" sqlType="VARCHAR" precision="12" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIHR5cGUgb2YgdGhlIGl0ZW0sIGVpdGhlciBtb2R1bGUsIHRoZW1lLCBvciB0aGVtZV9lbmdpbmUu"/>
+      <column name="owner" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="QSB0aGVtZeKAmXMg4oCZcGFyZW504oCZIC4gQ2FuIGJlIGVpdGhlciBhIHRoZW1lIG9yIGFuIGVuZ2luZS4="/>
+      <column name="status" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="Qm9vbGVhbiBpbmRpY2F0aW5nIHdoZXRoZXIgb3Igbm90IHRoaXMgaXRlbSBpcyBlbmFibGVkLg=="/>
+      <column name="bootstrap" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="Qm9vbGVhbiBpbmRpY2F0aW5nIHdoZXRoZXIgdGhpcyBtb2R1bGUgaXMgbG9hZGVkIGR1cmluZyBEcnVwYWzigJlzIGVhcmx5IGJvb3RzdHJhcHBpbmcgcGhhc2UgKGUuZy4gZXZlbiBiZWZvcmUgdGhlIHBhZ2UgY2FjaGUgaXMgY29uc3VsdGVkKS4="/>
+      <column name="schema_version" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="LTE=" remarks="VGhlIG1vZHVsZeKAmXMgZGF0YWJhc2Ugc2NoZW1hIHZlcnNpb24gbnVtYmVyLiAtMSBpZiB0aGUgbW9kdWxlIGlzIG5vdCBpbnN0YWxsZWQgKGl0cyB0YWJsZXMgZG8gbm90IGV4aXN0KTsgMCBvciB0aGUgbGFyZ2VzdCBOIG9mIHRoZSBtb2R1bGXigJlzIGhvb2tfdXBkYXRlX04oKSBmdW5jdGlvbiB0aGF0IGhhcyBlaXRoZXIgYmVlbiBydW4gb3IgZXhpc3RlZCB3aGVuIHRoZSBtb2R1bGUgd2FzIGZpcnN0IGluc3RhbGxlZC4="/>
+      <column name="weight" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIG9yZGVyIGluIHdoaWNoIHRoaXMgbW9kdWxl4oCZcyBob29rcyBzaG91bGQgYmUgaW52b2tlZCByZWxhdGl2ZSB0byBvdGhlciBtb2R1bGVzLiBFcXVhbC13ZWlnaHRlZCBtb2R1bGVzIGFyZSBvcmRlcmVkIGJ5IG5hbWUu"/>
+      <column name="info" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4" remarks="QSBzZXJpYWxpemVkIGFycmF5IGNvbnRhaW5pbmcgaW5mb3JtYXRpb24gZnJvbSB0aGUgbW9kdWxl4oCZcyAuaW5mbyBmaWxlOyBrZXlzIGNhbiBpbmNsdWRlIG5hbWUsIGRlc2NyaXB0aW9uLCBwYWNrYWdlLCB2ZXJzaW9uLCBjb3JlLCBkZXBlbmRlbmNpZXMsIGFuZCBwaHAu"/>
+      <primary-key name="PRIMARY" columns="filename"/>
+      <index name="system_list" unique="false" columns="status,bootstrap,type,weight,name"/>
+      <index name="type_name" unique="false" columns="type,name"/>
+    </table>
+    <table name="taxonomy_index" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="nid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIG5vZGUubmlkIHRoaXMgcmVjb3JkIHRyYWNrcy4="/>
+      <column name="tid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHRlcm0gSUQu"/>
+      <column name="sticky" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6" def="MA==" remarks="Qm9vbGVhbiBpbmRpY2F0aW5nIHdoZXRoZXIgdGhlIG5vZGUgaXMgc3RpY2t5Lg=="/>
+      <column name="created" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIFVuaXggdGltZXN0YW1wIHdoZW4gdGhlIG5vZGUgd2FzIGNyZWF0ZWQu"/>
+      <index name="nid" unique="false" columns="nid"/>
+      <index name="term_node" unique="false" columns="tid,sticky,created"/>
+    </table>
+    <table name="taxonomy_term_data" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="tid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="UHJpbWFyeSBLZXk6IFVuaXF1ZSB0ZXJtIElELg==" autoIncrement="true"/>
+      <column name="vid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHRheG9ub215X3ZvY2FidWxhcnkudmlkIG9mIHRoZSB2b2NhYnVsYXJ5IHRvIHdoaWNoIHRoZSB0ZXJtIGlzIGFzc2lnbmVkLg=="/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIHRlcm0gbmFtZS4="/>
+      <column name="description" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1" remarks="QSBkZXNjcmlwdGlvbiBvZiB0aGUgdGVybS4="/>
+      <column name="format" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="VGhlIGZpbHRlcl9mb3JtYXQuZm9ybWF0IG9mIHRoZSBkZXNjcmlwdGlvbi4="/>
+      <column name="weight" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHdlaWdodCBvZiB0aGlzIHRlcm0gaW4gcmVsYXRpb24gdG8gb3RoZXIgdGVybXMu"/>
+      <primary-key name="PRIMARY" columns="tid"/>
+      <index name="name" unique="false" columns="name"/>
+      <index name="taxonomy_tree" unique="false" columns="vid,weight,name"/>
+      <index name="vid_name" unique="false" columns="vid,name"/>
+    </table>
+    <table name="taxonomy_term_hierarchy" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="tid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="UHJpbWFyeSBLZXk6IFRoZSB0YXhvbm9teV90ZXJtX2RhdGEudGlkIG9mIHRoZSB0ZXJtLg=="/>
+      <column name="parent" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="UHJpbWFyeSBLZXk6IFRoZSB0YXhvbm9teV90ZXJtX2RhdGEudGlkIG9mIHRoZSB0ZXJt4oCZcyBwYXJlbnQuIDAgaW5kaWNhdGVzIG5vIHBhcmVudC4="/>
+      <primary-key name="PRIMARY" columns="tid,parent"/>
+      <index name="parent" unique="false" columns="parent"/>
+    </table>
+    <table name="taxonomy_vocabulary" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="vid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="UHJpbWFyeSBLZXk6IFVuaXF1ZSB2b2NhYnVsYXJ5IElELg==" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="TmFtZSBvZiB0aGUgdm9jYWJ1bGFyeS4="/>
+      <column name="machine_name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIHZvY2FidWxhcnkgbWFjaGluZSBuYW1lLg=="/>
+      <column name="description" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1" remarks="RGVzY3JpcHRpb24gb2YgdGhlIHZvY2FidWxhcnku"/>
+      <column name="hierarchy" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="VGhlIHR5cGUgb2YgaGllcmFyY2h5IGFsbG93ZWQgd2l0aGluIHRoZSB2b2NhYnVsYXJ5LiAoMCA9IGRpc2FibGVkLCAxID0gc2luZ2xlLCAyID0gbXVsdGlwbGUp"/>
+      <column name="module" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIG1vZHVsZSB3aGljaCBjcmVhdGVkIHRoZSB2b2NhYnVsYXJ5Lg=="/>
+      <column name="weight" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHdlaWdodCBvZiB0aGlzIHZvY2FidWxhcnkgaW4gcmVsYXRpb24gdG8gb3RoZXIgdm9jYWJ1bGFyaWVzLg=="/>
+      <primary-key name="PRIMARY" columns="vid"/>
+      <index name="machine_name" unique="true" columns="machine_name"/>
+      <index name="list" unique="false" columns="weight,name"/>
+    </table>
+    <table name="url_alias" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="pid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="QSB1bmlxdWUgcGF0aCBhbGlhcyBpZGVudGlmaWVyLg==" autoIncrement="true"/>
+      <column name="source" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIERydXBhbCBwYXRoIHRoaXMgYWxpYXMgaXMgZm9yOyBlLmcuIG5vZGUvMTIu"/>
+      <column name="alias" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGFsaWFzIGZvciB0aGlzIHBhdGg7IGUuZy4gdGl0bGUtb2YtdGhlLXN0b3J5Lg=="/>
+      <column name="language" sqlType="VARCHAR" precision="12" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIGxhbmd1YWdlIHRoaXMgYWxpYXMgaXMgZm9yOyBpZiDigJl1bmTigJksIHRoZSBhbGlhcyB3aWxsIGJlIHVzZWQgZm9yIHVua25vd24gbGFuZ3VhZ2VzLiBFYWNoIERydXBhbCBwYXRoIGNhbiBoYXZlIGFuIGFsaWFzIGZvciBlYWNoIHN1cHBvcnRlZCBsYW5ndWFnZS4="/>
+      <primary-key name="PRIMARY" columns="pid"/>
+      <index name="alias_language_pid" unique="false" columns="alias,language,pid"/>
+      <index name="source_language_pid" unique="false" columns="source,language,pid"/>
+    </table>
+    <table name="users" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="uid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="UHJpbWFyeSBLZXk6IFVuaXF1ZSB1c2VyIElELg=="/>
+      <column name="name" sqlType="VARCHAR" precision="60" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VW5pcXVlIHVzZXIgbmFtZS4="/>
+      <column name="pass" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VXNlcuKAmXMgcGFzc3dvcmQgKGhhc2hlZCku"/>
+      <column name="mail" sqlType="VARCHAR" precision="254" scale="0" nullable="true" jdbcType="12" def="Jyc=" remarks="VXNlcuKAmXMgZS1tYWlsIGFkZHJlc3Mu"/>
+      <column name="theme" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VXNlcuKAmXMgZGVmYXVsdCB0aGVtZS4="/>
+      <column name="signature" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VXNlcuKAmXMgc2lnbmF0dXJlLg=="/>
+      <column name="signature_format" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="VGhlIGZpbHRlcl9mb3JtYXQuZm9ybWF0IG9mIHRoZSBzaWduYXR1cmUu"/>
+      <column name="created" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGltZXN0YW1wIGZvciB3aGVuIHVzZXIgd2FzIGNyZWF0ZWQu"/>
+      <column name="access" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGltZXN0YW1wIGZvciBwcmV2aW91cyB0aW1lIHVzZXIgYWNjZXNzZWQgdGhlIHNpdGUu"/>
+      <column name="login" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGltZXN0YW1wIGZvciB1c2Vy4oCZcyBsYXN0IGxvZ2luLg=="/>
+      <column name="status" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="V2hldGhlciB0aGUgdXNlciBpcyBhY3RpdmUoMSkgb3IgYmxvY2tlZCgwKS4="/>
+      <column name="timezone" sqlType="VARCHAR" precision="32" scale="0" nullable="true" jdbcType="12" remarks="VXNlcuKAmXMgdGltZSB6b25lLg=="/>
+      <column name="language" sqlType="VARCHAR" precision="12" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VXNlcuKAmXMgZGVmYXVsdCBsYW5ndWFnZS4="/>
+      <column name="picture" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="Rm9yZWlnbiBrZXk6IGZpbGVfbWFuYWdlZC5maWQgb2YgdXNlcuKAmXMgcGljdHVyZS4="/>
+      <column name="init" sqlType="VARCHAR" precision="254" scale="0" nullable="true" jdbcType="12" def="Jyc=" remarks="RS1tYWlsIGFkZHJlc3MgdXNlZCBmb3IgaW5pdGlhbCBhY2NvdW50IGNyZWF0aW9uLg=="/>
+      <column name="data" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="true" jdbcType="-4" remarks="QSBzZXJpYWxpemVkIGFycmF5IG9mIG5hbWUgdmFsdWUgcGFpcnMgdGhhdCBhcmUgcmVsYXRlZCB0byB0aGUgdXNlci4gQW55IGZvcm0gdmFsdWVzIHBvc3RlZCBkdXJpbmcgdXNlciBlZGl0IGFyZSBzdG9yZWQgYW5kIGFyZSBsb2FkZWQgaW50byB0aGUgJHVzZXIgb2JqZWN0IGR1cmluZyB1c2VyX2xvYWQoKS4gVXNlIG9mIHRoaXMgZmllbGQgaXMgZGlzY291cmFnZWQgYW5kIGl0IHdpbGwgbGlrZWx5IGRpc2FwcGVhciBpbiBhIGZ1dHVyZS4uLg=="/>
+      <primary-key name="PRIMARY" columns="uid"/>
+      <index name="name" unique="true" columns="name"/>
+      <index name="access" unique="false" columns="access"/>
+      <index name="created" unique="false" columns="created"/>
+      <index name="mail" unique="false" columns="mail"/>
+      <index name="picture" unique="false" columns="picture"/>
+    </table>
+    <table name="users_roles" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="uid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="UHJpbWFyeSBLZXk6IHVzZXJzLnVpZCBmb3IgdXNlci4="/>
+      <column name="rid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="UHJpbWFyeSBLZXk6IHJvbGUucmlkIGZvciByb2xlLg=="/>
+      <primary-key name="PRIMARY" columns="uid,rid"/>
+      <index name="rid" unique="false" columns="rid"/>
+    </table>
+    <table name="variable" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="name" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VGhlIG5hbWUgb2YgdGhlIHZhcmlhYmxlLg=="/>
+      <column name="value" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="false" jdbcType="-4" remarks="VGhlIHZhbHVlIG9mIHRoZSB2YXJpYWJsZS4="/>
+      <primary-key name="PRIMARY" columns="name"/>
+    </table>
+    <table name="watchdog" schema="" catalog="bitnami_drupal7" type="TABLE">
+      <column name="wid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="UHJpbWFyeSBLZXk6IFVuaXF1ZSB3YXRjaGRvZyBldmVudCBJRC4=" autoIncrement="true"/>
+      <column name="uid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VGhlIHVzZXJzLnVpZCBvZiB0aGUgdXNlciB3aG8gdHJpZ2dlcmVkIHRoZSBldmVudC4="/>
+      <column name="type" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="VHlwZSBvZiBsb2cgbWVzc2FnZSwgZm9yIGV4YW1wbGUgInVzZXIiIG9yICJwYWdlIG5vdCBmb3VuZC4i"/>
+      <column name="message" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="false" jdbcType="-1" remarks="VGV4dCBvZiBsb2cgbWVzc2FnZSB0byBiZSBwYXNzZWQgaW50byB0aGUgdCgpIGZ1bmN0aW9uLg=="/>
+      <column name="variables" sqlType="LONGBLOB" precision="2147483647" scale="0" nullable="false" jdbcType="-4" remarks="U2VyaWFsaXplZCBhcnJheSBvZiB2YXJpYWJsZXMgdGhhdCBtYXRjaCB0aGUgbWVzc2FnZSBzdHJpbmcgYW5kIHRoYXQgaXMgcGFzc2VkIGludG8gdGhlIHQoKSBmdW5jdGlvbi4="/>
+      <column name="severity" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="VGhlIHNldmVyaXR5IGxldmVsIG9mIHRoZSBldmVudDsgcmFuZ2VzIGZyb20gMCAoRW1lcmdlbmN5KSB0byA3IChEZWJ1Zyk="/>
+      <column name="link" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" def="Jyc=" remarks="TGluayB0byB2aWV3IHRoZSByZXN1bHQgb2YgdGhlIGV2ZW50Lg=="/>
+      <column name="location" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1" remarks="VVJMIG9mIHRoZSBvcmlnaW4gb2YgdGhlIGV2ZW50Lg=="/>
+      <column name="referer" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" remarks="VVJMIG9mIHJlZmVycmluZyBwYWdlLg=="/>
+      <column name="hostname" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="SG9zdG5hbWUgb2YgdGhlIHVzZXIgd2hvIHRyaWdnZXJlZCB0aGUgZXZlbnQu"/>
+      <column name="timestamp" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="VW5peCB0aW1lc3RhbXAgb2Ygd2hlbiBldmVudCBvY2N1cnJlZC4="/>
+      <primary-key name="PRIMARY" columns="wid"/>
+      <index name="severity" unique="false" columns="severity"/>
+      <index name="type" unique="false" columns="type"/>
+      <index name="uid" unique="false" columns="uid"/>
+    </table>
+    <table name="wp_commentmeta" schema="" catalog="bitnami_wordpress" type="TABLE">
+      <column name="meta_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="comment_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="meta_key" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="meta_value" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="meta_id"/>
+      <index name="comment_id" unique="false" columns="comment_id"/>
+      <index name="meta_key" unique="false" columns="meta_key"/>
+    </table>
+    <table name="wp_comments" schema="" catalog="bitnami_wordpress" type="TABLE">
+      <column name="comment_ID" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="comment_post_ID" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="comment_author" sqlType="TINYTEXT" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="comment_author_email" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="comment_author_url" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="comment_author_IP" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="comment_date" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="comment_date_gmt" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="comment_content" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="comment_karma" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="comment_approved" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12" def="JzEn"/>
+      <column name="comment_agent" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="comment_type" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="comment_parent" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="user_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <primary-key name="PRIMARY" columns="comment_ID"/>
+      <index name="comment_approved_date_gmt" unique="false" columns="comment_approved,comment_date_gmt"/>
+      <index name="comment_author_email" unique="false" columns="comment_author_email"/>
+      <index name="comment_date_gmt" unique="false" columns="comment_date_gmt"/>
+      <index name="comment_parent" unique="false" columns="comment_parent"/>
+      <index name="comment_post_ID" unique="false" columns="comment_post_ID"/>
+    </table>
+    <table name="wp_links" schema="" catalog="bitnami_wordpress" type="TABLE">
+      <column name="link_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="link_url" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="link_name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="link_image" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="link_target" sqlType="VARCHAR" precision="25" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="link_description" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="link_visible" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12" def="J1kn"/>
+      <column name="link_owner" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MQ=="/>
+      <column name="link_rating" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="link_updated" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="link_rel" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="link_notes" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="link_rss" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="link_id"/>
+      <index name="link_visible" unique="false" columns="link_visible"/>
+    </table>
+    <table name="wp_options" schema="" catalog="bitnami_wordpress" type="TABLE">
+      <column name="option_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="option_name" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="option_value" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="autoload" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12" def="J3llcyc="/>
+      <primary-key name="PRIMARY" columns="option_id"/>
+      <index name="option_name" unique="true" columns="option_name"/>
+    </table>
+    <table name="wp_postmeta" schema="" catalog="bitnami_wordpress" type="TABLE">
+      <column name="meta_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="post_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="meta_key" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="meta_value" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="meta_id"/>
+      <index name="meta_key" unique="false" columns="meta_key"/>
+      <index name="post_id" unique="false" columns="post_id"/>
+    </table>
+    <table name="wp_posts" schema="" catalog="bitnami_wordpress" type="TABLE">
+      <column name="ID" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="post_author" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="post_date" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="post_date_gmt" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="post_content" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="post_title" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="post_excerpt" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="post_status" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12" def="J3B1Ymxpc2gn"/>
+      <column name="comment_status" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12" def="J29wZW4n"/>
+      <column name="ping_status" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12" def="J29wZW4n"/>
+      <column name="post_password" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="post_name" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="to_ping" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="pinged" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="post_modified" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="post_modified_gmt" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="post_content_filtered" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="post_parent" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="guid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="menu_order" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="post_type" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12" def="J3Bvc3Qn"/>
+      <column name="post_mime_type" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="comment_count" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <primary-key name="PRIMARY" columns="ID"/>
+      <index name="post_author" unique="false" columns="post_author"/>
+      <index name="post_name" unique="false" columns="post_name"/>
+      <index name="post_parent" unique="false" columns="post_parent"/>
+      <index name="type_status_date" unique="false" columns="post_type,post_status,post_date,ID"/>
+    </table>
+    <table name="wp_term_relationships" schema="" catalog="bitnami_wordpress" type="TABLE">
+      <column name="object_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="term_taxonomy_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="term_order" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="object_id,term_taxonomy_id"/>
+      <index name="term_taxonomy_id" unique="false" columns="term_taxonomy_id"/>
+    </table>
+    <table name="wp_term_taxonomy" schema="" catalog="bitnami_wordpress" type="TABLE">
+      <column name="term_taxonomy_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="term_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="taxonomy" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="description" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="parent" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="count" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <primary-key name="PRIMARY" columns="term_taxonomy_id"/>
+      <index name="term_id_taxonomy" unique="true" columns="term_id,taxonomy"/>
+      <index name="taxonomy" unique="false" columns="taxonomy"/>
+    </table>
+    <table name="wp_terms" schema="" catalog="bitnami_wordpress" type="TABLE">
+      <column name="term_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="slug" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="term_group" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <primary-key name="PRIMARY" columns="term_id"/>
+      <index name="name" unique="false" columns="name"/>
+      <index name="slug" unique="false" columns="slug"/>
+    </table>
+    <table name="wp_usermeta" schema="" catalog="bitnami_wordpress" type="TABLE">
+      <column name="umeta_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="user_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="meta_key" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="meta_value" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="umeta_id"/>
+      <index name="meta_key" unique="false" columns="meta_key"/>
+      <index name="user_id" unique="false" columns="user_id"/>
+    </table>
+    <table name="wp_users" schema="" catalog="bitnami_wordpress" type="TABLE">
+      <column name="ID" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="user_login" sqlType="VARCHAR" precision="60" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="user_pass" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="user_nicename" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="user_email" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="user_url" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="user_registered" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="user_activation_key" sqlType="VARCHAR" precision="60" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="user_status" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="display_name" sqlType="VARCHAR" precision="250" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="ID"/>
+      <index name="user_login_key" unique="false" columns="user_login"/>
+      <index name="user_nicename" unique="false" columns="user_nicename"/>
+    </table>
+    <table name="activity" schema="" catalog="bugs" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="description" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="activity" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="permissions" schema="" catalog="bugs" type="TABLE">
+      <column name="id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="permission" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="description" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="auto_has" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="projects" schema="" catalog="bugs" type="TABLE">
+      <column name="id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="status" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6" def="MQ=="/>
+      <column name="created_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="default_assignee" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="true" jdbcType="-5"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="projects_issues" schema="" catalog="bugs" type="TABLE">
+      <column name="id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="created_by" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="closed_by" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="updated_by" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="assigned_to" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="project_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="status" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6" def="MQ=="/>
+      <column name="weight" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5" def="MQ=="/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="body" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="created_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="closed_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="projects_issues_attachments" schema="" catalog="bugs" type="TABLE">
+      <column name="id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="issue_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="comment_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5" def="MA=="/>
+      <column name="uploaded_by" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="filesize" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="filename" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="fileextension" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="upload_token" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="projects_issues_comments" schema="" catalog="bugs" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="created_by" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5" def="MA=="/>
+      <column name="project_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="issue_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5" def="MA=="/>
+      <column name="comment" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="created_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="projects_issues_tags" schema="" catalog="bugs" type="TABLE">
+      <column name="id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="issue_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="tag_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="created_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="issue_tag" unique="true" columns="issue_id,tag_id"/>
+    </table>
+    <table name="projects_users" schema="" catalog="bugs" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="user_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5" def="MA=="/>
+      <column name="project_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5" def="MA=="/>
+      <column name="role_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5" def="MA=="/>
+      <column name="created_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="roles" schema="" catalog="bugs" type="TABLE">
+      <column name="id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="roles_permissions" schema="" catalog="bugs" type="TABLE">
+      <column name="id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="role_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="permission_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="sessions" schema="" catalog="bugs" type="TABLE">
+      <column name="id" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_activity" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="data" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="settings" schema="" catalog="bugs" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="key" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="value" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="tags" schema="" catalog="bugs" type="TABLE">
+      <column name="id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="tag" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="bgcolor" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="tag" unique="true" columns="tag"/>
+    </table>
+    <table name="users" schema="" catalog="bugs" type="TABLE">
+      <column name="id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="role_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MQ=="/>
+      <column name="email" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="firstname" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="lastname" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="language" sqlType="VARCHAR" precision="5" scale="0" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="deleted" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="users_activity" schema="" catalog="bugs" type="TABLE">
+      <column name="id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="user_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="parent_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="item_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="action_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="type_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="data" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="created_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="users_todos" schema="" catalog="bugs" type="TABLE">
+      <column name="id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="issue_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="user_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="status" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6" def="MQ=="/>
+      <column name="weight" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5" def="MQ=="/>
+      <column name="created_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="users" schema="" catalog="ci_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="address" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="mobile" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="customers" schema="" catalog="classicmodels" type="TABLE">
+      <column name="customerNumber" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="customerName" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="contactLastName" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="contactFirstName" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="phone" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="addressLine1" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="addressLine2" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="city" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="state" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="postalCode" sqlType="VARCHAR" precision="15" scale="0" nullable="true" jdbcType="12"/>
+      <column name="country" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="salesRepEmployeeNumber" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="creditLimit" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
+      <primary-key name="PRIMARY" columns="customerNumber"/>
+      <foreign-key name="customers_ibfk_1" columns="salesRepEmployeeNumber" ref-table="employees" ref-schema="" ref-catalog="classicmodels" ref-columns="employeeNumber" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="orders_ibfk_1" table="orders" schema="" catalog="classicmodels" columns="customerNumber"/>
+      <exported-key name="payments_ibfk_1" table="payments" schema="" catalog="classicmodels" columns="customerNumber"/>
+    </table>
+    <table name="employees" schema="" catalog="classicmodels" type="TABLE">
+      <column name="employeeNumber" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="lastName" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="firstName" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="extension" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="officeCode" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="reportsTo" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="jobTitle" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="employeeNumber"/>
+      <foreign-key name="employees_ibfk_1" columns="reportsTo" ref-table="employees" ref-schema="" ref-catalog="classicmodels" ref-columns="employeeNumber" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="employees_ibfk_2" columns="officeCode" ref-table="offices" ref-schema="" ref-catalog="classicmodels" ref-columns="officeCode" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="customers_ibfk_1" table="customers" schema="" catalog="classicmodels" columns="salesRepEmployeeNumber"/>
+      <exported-key name="employees_ibfk_1" table="employees" schema="" catalog="classicmodels" columns="reportsTo"/>
+    </table>
+    <table name="offices" schema="" catalog="classicmodels" type="TABLE">
+      <column name="officeCode" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="city" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="phone" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="addressLine1" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="addressLine2" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="state" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="country" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="postalCode" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
+      <column name="territory" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="officeCode"/>
+      <exported-key name="employees_ibfk_2" table="employees" schema="" catalog="classicmodels" columns="officeCode"/>
+    </table>
+    <table name="orderdetails" schema="" catalog="classicmodels" type="TABLE">
+      <column name="orderNumber" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="productCode" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
+      <column name="quantityOrdered" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="priceEach" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="orderLineNumber" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5"/>
+      <primary-key name="PRIMARY" columns="orderNumber,productCode"/>
+      <foreign-key name="orderdetails_ibfk_1" columns="orderNumber" ref-table="orders" ref-schema="" ref-catalog="classicmodels" ref-columns="orderNumber" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="orderdetails_ibfk_2" columns="productCode" ref-table="products" ref-schema="" ref-catalog="classicmodels" ref-columns="productCode" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="orders" schema="" catalog="classicmodels" type="TABLE">
+      <column name="orderNumber" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="orderDate" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="requiredDate" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="shippedDate" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="status" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
+      <column name="comments" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="customerNumber" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="orderNumber"/>
+      <foreign-key name="orders_ibfk_1" columns="customerNumber" ref-table="customers" ref-schema="" ref-catalog="classicmodels" ref-columns="customerNumber" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="orderdetails_ibfk_1" table="orderdetails" schema="" catalog="classicmodels" columns="orderNumber"/>
+    </table>
+    <table name="payments" schema="" catalog="classicmodels" type="TABLE">
+      <column name="customerNumber" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="checkNumber" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="paymentDate" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="amount" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <primary-key name="PRIMARY" columns="customerNumber,checkNumber"/>
+      <foreign-key name="payments_ibfk_1" columns="customerNumber" ref-table="customers" ref-schema="" ref-catalog="classicmodels" ref-columns="customerNumber" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="productlines" schema="" catalog="classicmodels" type="TABLE">
+      <column name="productLine" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="textDescription" sqlType="VARCHAR" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="htmlDescription" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="image" sqlType="MEDIUMBLOB" precision="16777215" scale="0" nullable="true" jdbcType="-4"/>
+      <primary-key name="PRIMARY" columns="productLine"/>
+      <exported-key name="products_ibfk_1" table="products" schema="" catalog="classicmodels" columns="productLine"/>
+    </table>
+    <table name="products" schema="" catalog="classicmodels" type="TABLE">
+      <column name="productCode" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
+      <column name="productName" sqlType="VARCHAR" precision="70" scale="0" nullable="false" jdbcType="12"/>
+      <column name="productLine" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="productScale" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="productVendor" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="productDescription" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="quantityInStock" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5"/>
+      <column name="buyPrice" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="MSRP" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <primary-key name="PRIMARY" columns="productCode"/>
+      <foreign-key name="products_ibfk_1" columns="productLine" ref-table="productlines" ref-schema="" ref-catalog="classicmodels" ref-columns="productLine" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="orderdetails_ibfk_2" table="orderdetails" schema="" catalog="classicmodels" columns="productCode"/>
+    </table>
+    <table name="clients" schema="" catalog="griddemo" type="TABLE">
+      <column name="client_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="CHAR" precision="120" scale="0" nullable="true" jdbcType="1"/>
+      <column name="gender" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="company" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="client_id"/>
+    </table>
+    <table name="invheader" schema="" catalog="griddemo" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="invdate" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="client_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="amount" sqlType="DECIMAL" precision="10" scale="2" nullable="false" jdbcType="3" def="MC4wMA=="/>
+      <column name="tax" sqlType="DECIMAL" precision="10" scale="2" nullable="false" jdbcType="3" def="MC4wMA=="/>
+      <column name="total" sqlType="DECIMAL" precision="10" scale="2" nullable="false" jdbcType="3" def="MC4wMA=="/>
+      <column name="note" sqlType="CHAR" precision="100" scale="0" nullable="true" jdbcType="1"/>
+      <column name="closed" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1" def="J05vJw=="/>
+      <column name="ship_via" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="invlines" schema="" catalog="griddemo" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="num" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="item" sqlType="CHAR" precision="20" scale="0" nullable="true" jdbcType="1"/>
+      <column name="qty" sqlType="DECIMAL" precision="8" scale="2" nullable="false" jdbcType="3" def="MC4wMA=="/>
+      <column name="unit" sqlType="DECIMAL" precision="10" scale="2" nullable="false" jdbcType="3"/>
+      <primary-key name="PRIMARY" columns="id,num"/>
+    </table>
+    <table name="items" schema="" catalog="griddemo" type="TABLE">
+      <column name="item_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="item" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12"/>
+      <column name="item_cd" sqlType="VARCHAR" precision="15" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="item_id"/>
+    </table>
+  </data-source>
+</component>

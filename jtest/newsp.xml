@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<newsitems>
+  <news type="programming">
+    PHP 6 has been released!
+    </news>
+  <news type="programming">
+    Larry Wall switches to PHP!
+    </news>
+  <news type="sci-tech">
+    Cat lands on Mars!
+    </news>
+  <news type="programming">
+    XML takes over world!
+    </news>
+</newsitems>
